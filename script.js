@@ -29,3 +29,19 @@ function openNav() {
 
     greetingMessage.textContent = greetingText;
 });
+
+function toggleNav() {
+    const sidebar = document.getElementById("mySidebar");
+    const openBtn = document.getElementById("openBtn");
+    const closeBtn = document.getElementById("closeBtn");
+
+    if (sidebar.classList.contains("open")) {
+        sidebar.classList.remove("open");
+        closeBtn.classList.add("hide");
+        openBtn.classList.remove("hide");
+    } else {
+        sidebar.classList.add("open");
+        openBtn.classList.add("hide");
+        closeBtn.classList.remove("hide");
+    }
+}
