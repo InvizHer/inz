@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvizHer | Home</title>
+
+    <!--Linked Files-->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="primary.css" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="body">
+
+        <header>
+            <div class="header-container">
+                <div class="header-items flex align-center justify-center space-between box-shadow border-radius">
+                    <a href="#" class="title flex align-center">
+                        <img src="logo.png" alt="logo-image">
+                        <h1>InvizHer</h1>
+                    </a>
+
+                    <nav class="sidebar display-none" id="mySidebar">
+                        <button class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button>
+                        <p>Explore More</p>
+                        <ul class="nav-list">
+                            <li><i class="fa-solid fa-house"></i><a href="#Home">Home</a></li>
+                            <li><i class="fa-solid fa-file-pen"></i><a href="posts">Posts</a></li>
+                            <li><i class="fa-solid fa-file-code"></i><a href="posts/?tag=notes">Notes</a></li>
+                            <li><i class="fa-brands fa-html5"></i><a href="posts/?tag=webdev">Webdev</a></li>
+                            <li><i class="fa-solid fa-gears"></i><a href="posts/?tag=projects">Projects</a></li>
+                            <li><i class="fa-solid fa-clipboard-question"></i><a href="posts/?tag=questions">Questions</a></li>
+                        </ul>
+                        <ul class="nav-list social">
+                            <li><i class="fa-brands fa-youtube"></i><a href="https://www.youtube.com/@invizher">YouTube</a></li>
+                            <li><i class="fa-brands fa-square-github"></i><a href="https://github.com/PavanMagar">GitHub</a></li>
+                            <li><i class="fa-brands fa-square-x-twitter"></i><a href="twitter.com">Twitter</a></li>
+                            <li><i class="fa-brands fa-linkedin"></i><a href="linkedin.com">Linkedin</a></li>
+                            <li><i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/invizher/">instagram</a></li>
+                            <li><i class="fa-brands fa-telegram"></i><a href="https://telegram.me/invizher">Telegram</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="header-icons flex align-center justify-center space-between">
+                        <a class="support-btn"><i class="fa-solid fa-laptop-code"></i></a>
+                        <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars-staggered"></i></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <div class="main-container">
+                <!--=============== HOME ===============-->
+                <section class="home section">
+                    <div class="home__container container grid">
+                        <div class="home__data">
+                            <span class="home__greeting">Hello, I'm</span>
+                            <h1 class="home__name">Pavan Magar</h1>
+                            <h3 class="home__education">ComSci Background Student</h3>
+                        </div>
+        
+                        <div class="home__handle">
+                            <img src="profile.png" alt="" class="home__img">
+                        </div>
+        
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/" target="_blank" class="home__social-link">
+                                <i class='bx bxl-linkedin-square'></i>
+                            </a>
+                            <a href="https://github.com/" target="_blank" class="home__social-link">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                            <a href="https://dribbble.com/" target="_blank" class="home__social-link">
+                                <i class='bx bxl-dribbble'></i>
+                            </a>
+                        </div>
+        
+                        <a href="#about" class="home__scroll">
+                            <i class='bx bx-mouse home__scroll-icon'></i>
+                            <span class="home__scroll-name">Scroll Down</span>
+                        </a>
+                    </div>
+                </section>
+        
+                <!--=============== ABOUT ===============-->
+                <section class="about section" id="about">
+        
+                    <div class="about__container container grid">
+        
+                        <div class="about__data">
+                            <div class="about__info flex justify-center">
+                                <div class="about__box">
+                                    <i class='bx bx-award about__icon'></i>
+                                    <h3 class="about__title">Experience</h3>
+                                    <span class="about__subtitle">2 Years Working</span>
+                                </div>
+        
+                                <div class="about__box">
+                                    <i class='bx bx-briefcase-alt about__icon'></i>
+                                    <h3 class="about__title">Completed</h3>
+                                    <span class="about__subtitle">20 + Projects</span>
+                                </div>
+        
+                                <div class="about__box">
+                                    <i class='bx bx-support about__icon'></i>
+                                    <h3 class="about__title">Support</h3>
+                                    <span class="about__subtitle">Online 24/7</span>
+                                </div>
+                            </div>
+        
+                            <p class="about__description">
+                             From Pune Maharashtra, India with focus on software and web development. Here's a goal-driven creative mindset to solve the problems and passion for learning and innovating new things in a world of development.
+                            </p>
+        
+                            <a href="#contact" class="button">Contact Me</a>
+                            <a href="assets/pdf/Pavan-Magar-CV.pdf" target="_blank" class="top-github">
+                            <i class="bx bx-file"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>
