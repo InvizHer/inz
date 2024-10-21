@@ -20,31 +20,27 @@
 <body>
 
     <header>
-
         <div class="header-items">
             <a href="#" class="title">
                 <img src="logo.png" alt="logo-image">
                 <h1>InvizHer</h1>
             </a>
-
-            <nav class="sidebar" id="mySidebar">
-                <button class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button>
-                <p>Explore More</p>
-                <ul class="nav-list">
-                    <li><i class="fa-solid fa-house"></i><a href="#Home">Home</a></li>
-                    <li><i class="fa-solid fa-file-pen"></i><a href="posts">Posts</a></li>
-                    <li><i class="fa-solid fa-file-code"></i><a href="posts/?tag=notes">Notes</a></li>
-                    <li><i class="fa-brands fa-html5"></i><a href="posts/?tag=webdev">Webdev</a></li>
-                    <li><i class="fa-solid fa-gears"></i><a href="posts/?tag=projects">Projects</a></li>
-                    <li><i class="fa-solid fa-clipboard-question"></i><a href="posts/?tag=questions">Questions</a></li>
-                </ul>
-            </nav>
-
             <div class="header-icons">
                 <a class="support-btn"><i class="fa-solid fa-mug-saucer"></i></a>
-                <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars-staggered"></i></button>
+                <div class="toggle-btns">
+                    <button class="openbtn" id="openBtn" onclick="toggleNav()"><i class="fa-solid fa-bars-staggered"></i></button>
+                    <button class="closebtn hide" id="closeBtn" onclick="toggleNav()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
             </div>
         </div>
+        <nav class="sidebar" id="mySidebar">
+            <ul class="nav-list">
+                <li><i class="fa-solid fa-house"></i><a href="#Home">Home</a></li>
+                <li><i class="fa-solid fa-file-pen"></i><a href="posts">Posts</a></li>
+                <li><i class="fa-solid fa-file-code"></i><a href="posts/?tag=notes">Notes</a></li>
+                <li><i class="fa-brands fa-html5"></i><a href="posts/?tag=webdev">Webdev</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!--======================== MAIN CONTENT ===================-->
@@ -55,7 +51,7 @@
                 <div class="home-data">
                     <span id="greeting-message"></span>
                     <h1>Pavan Magar</h1>
-                    <h3>ComSci Background Student</h3>
+                    <h3>Computer Sci Student.</h3>
                 </div>
 
                 <div class="home-profile">
