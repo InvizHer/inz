@@ -48,6 +48,7 @@ body{
     font-family: var(--second-font);
     font-size: var(--small-size-font);
     color: var(--gray-600);
+    background-color: var(--background-color);
 }
 
 h1, h2{
@@ -83,7 +84,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: hsla(var(--second-hue), 32%, 90%, 0.8);
+    background-color: hsla(var(--second-hue), 32%, 90%, 0.5);
     border-radius: 4rem;
     backdrop-filter: blur(100px);
     transition: 0.4s;
@@ -172,8 +173,8 @@ nav.sidebar.open {
     flex-direction: column;
     background: linear-gradient(
         180deg,
-        hsla(var(--first-hue), var(--sat), var(--lig), 0.05),
-        hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
+        hsla(var(--first-hue), var(--sat), var(--lig), 0),
+        hsla(var(--first-hue), var(--sat), var(--lig), 0.1)
       );
     border-radius: 2rem;
     backdrop-filter: blur(100px);
@@ -218,6 +219,10 @@ main{
 .grid {
     display: grid;
     gap: 1.25rem;
+}
+
+section{
+    margin: 1rem 0;
 }
 
   /*=============== BUTTONS ===============*/
@@ -416,4 +421,73 @@ main{
     border: 1px solid var(--first-color);
     transition: 0.4s;
     margin-left: 20px;
+}
+
+
+/*=================== POSTS SECTION ===================== */
+
+.section-heading, .section-sub-heading{
+    text-align: center;
+}
+
+.section-heading{
+    font-size: 1.5rem;
+}
+
+.posts{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.posts-container{
+    margin-top: 2rem;
+}
+
+.article-card{
+    width: auto;
+    max-width: 350px;
+    height: auto;
+    background: #fff;
+    border-radius: 1.5rem;
+    margin: 2.2rem 1.5rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
+  }
+  
+.article-card-img{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+  
+.article-card-img img{
+    width: 100%;
+    height: auto;
+    max-height: 15rem;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.article-data{
+    padding: 0 1rem;
+}
+  
+.article-title{
+    color: var(--gray-600);
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+  
+.article-description{
+    padding: 1rem 0;
+    color: var(--gray-400);
+    font-size: var(--small-size-font);
+}
+  
+.article-time{
+    font-size: .8rem;
+    color: var(--gray-500);
 }
