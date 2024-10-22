@@ -13,6 +13,8 @@
     --first-color: hsl(var(--first-hue), var(--sat), var(--lig)); 
     --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
 
+    --body-color: hsl(var(--second-hue), 100%, 99%);
+
     --gray-50: #f0f1f3;
     --gray-100: #e0e2e8;
     --gray-200: #c3c6d1;
@@ -48,6 +50,7 @@ body{
     font-family: var(--second-font);
     font-size: var(--small-size-font);
     color: var(--gray-600);
+    background-color: var(--body-color);
 }
 
 h1, h2{
@@ -269,13 +272,13 @@ section{
 .home-data h1{
     font-family: var(--third-font);
     font-size: 1.7rem;
-    color: var(--gray-500);
+    color: var(--gray-600);
 }
 
 .home-data h3{
     font-size: 0.813rem;
     font-weight: 500;
-    color: var(--gray-400);
+    color: var(--gray-500);
     margin-bottom: 1rem;
 }
 
@@ -448,7 +451,7 @@ section{
     overflow: hidden;
     position: relative;
     box-shadow: rgba(157, 157, 158, 0.15) 0px 48px 100px 0px;
-    border: 1px solid var(--gray-50);
+    border: 1px solid var(--gray-100);
   }
 
 
@@ -478,7 +481,7 @@ section{
   
 .article-description{
     padding: 1rem 0;
-    color: var(--gray-400);
+    color: var(--gray-500);
     font-size: var(--small-size-font);
 }
   
