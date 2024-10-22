@@ -7,13 +7,24 @@
     
     --first-hue: 250;
     --sat: 66%;
-    --lig: 75%;
-    --second-hue: 219;
+  --lig: 75%;
+  --second-hue: 219;
 
     --first-color: hsl(var(--first-hue), var(--sat), var(--lig)); 
     --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
 
     --body-color: hsl(var(--second-hue), 100%, 99%);
+
+    --blue-50: #f5f5fd;
+    --blue-100: #eeecfb;
+    --blue-200: #dfdcf8;
+    --blue-300: #c6bff3;
+    --blue-400: #a395e9;
+    --blue-500: #8b72e0;
+    --blue-600: #7853d4;
+    --blue-700: #6841c0;
+    --blue-800: #5736a1;
+    --blue-900: #492e84;
 
     --gray-50: #f0f1f3;
     --gray-100: #e0e2e8;
@@ -86,7 +97,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: hsla(var(--second-hue), 32%, 90%, 0.5);
+    background-color: hsla(var(--second-hue), 32%, 90%, 0.8);
     border-radius: 4rem;
     backdrop-filter: blur(100px);
     transition: 0.4s;
@@ -106,7 +117,7 @@ header{
 .title h1{
     font-family: var(--third-font);
     font-size: 1.2rem;
-    color: var(--first-color);
+    color: var(--blue-500);
 }
 
 .header-icons{
@@ -231,7 +242,7 @@ section{
   /*=============== BUTTONS ===============*/
 .button {
     display: inline-block;
-    background-color: var(--first-color);
+    background-color: var(--blue-500);
     color: #FFF;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
@@ -287,10 +298,9 @@ section{
     width: 200px;
     height: 250px;
     background: linear-gradient(
-      180deg,
-      hsla(var(--first-hue), var(--sat), var(--lig), 1),
-      hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
-    );
+    180deg,
+    hsla(var(--first-hue), var(--sat), var(--lig), 1),
+    hsla(var(--first-hue), var(--sat), var(--lig), 0.2));
     border-radius: 10rem 10rem 1rem 1rem;
     display: flex;
     align-items: flex-end;
@@ -299,7 +309,7 @@ section{
 }
 
 .profile-img{
-    max-width: 250px;
+    max-width: 240px;
 }
 
 .home-social, .home-scroll{
@@ -315,7 +325,7 @@ section{
 
 .home-social-link{
     width: max-content;
-    color: var(--first-color);
+    color: var(--blue-500);
     padding: 0.25rem;
     border-radius: 0.25rem;
     display: flex;
@@ -338,7 +348,7 @@ section{
 }
 
 .home-scroll {
-    color: var(--first-color);
+    color: var(--blue-500);
     right: -1.5rem;
     bottom: 1px;
     display: grid;
