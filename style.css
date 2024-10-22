@@ -48,7 +48,6 @@ body{
     font-family: var(--second-font);
     font-size: var(--small-size-font);
     color: var(--gray-600);
-    background-color: var(--background-color);
 }
 
 h1, h2{
@@ -385,7 +384,7 @@ section{
 }
 
 .about-icon {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--first-color);
     margin-bottom: 0.5rem;
   }
@@ -411,7 +410,6 @@ section{
     justify-content: center;
     gap: 1rem;
 }
-
 
 /*=================== POSTS SECTION ===================== */
 
@@ -449,7 +447,7 @@ section{
     margin: 2.2rem 1.5rem;
     overflow: hidden;
     position: relative;
-    box-shadow: 20px 20px 30px rgba(159, 159, 159, 0.05);
+    box-shadow: 20px 20px 30px rgba(159, 159, 159, 0.1);
   }
   
 .article-card-img{
