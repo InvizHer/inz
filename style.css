@@ -447,9 +447,11 @@ section{
     margin: 2.2rem 1.5rem;
     overflow: hidden;
     position: relative;
-    box-shadow: 20px 20px 30px rgba(159, 159, 159, 0.1);
+    box-shadow: rgba(157, 157, 158, 0.15) 0px 48px 100px 0px;
+    border: 1px solid var(--gray-50);
   }
-  
+
+
 .article-card-img{
     width: 100%;
     height: auto;
