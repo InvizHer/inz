@@ -171,12 +171,13 @@ nav.sidebar.open {
 .nav-list{
     display: flex;
     flex-direction: column;
+    justify-items: center;
     background: linear-gradient(
         180deg,
         hsla(var(--first-hue), var(--sat), var(--lig), 0),
         hsla(var(--first-hue), var(--sat), var(--lig), 0.1)
       );
-    border-radius: 2rem;
+    border-radius: 1rem;
     backdrop-filter: blur(100px);
     padding: 1.3rem 1rem;
     gap: 1.5rem;
@@ -376,12 +377,11 @@ section{
 .about-box{
     background: linear-gradient(
         180deg,
-        hsla(var(--first-hue), var(--sat), var(--lig), 0.2),
+        hsla(var(--first-hue), var(--sat), var(--lig), 0.02),
         hsla(var(--first-hue), var(--sat), var(--lig), 0.1)
       );
     border-radius: 0.75rem;
     padding: 0.75rem 0.5rem;
-    box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
 }
 
 .about-icon {
@@ -412,17 +412,6 @@ section{
     gap: 1rem;
 }
 
-.top-github {
-    font-size: 22px;
-    display: inline-block;
-    color: var(--first-color);
-    padding: 0.35rem 0.8rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--first-color);
-    transition: 0.4s;
-    margin-left: 20px;
-}
-
 
 /*=================== POSTS SECTION ===================== */
 
@@ -432,6 +421,12 @@ section{
 
 .section-heading{
     font-size: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--first-color);
+}
+
+.section-sub-heading{
+    margin-bottom: .2rem;
 }
 
 .posts{
@@ -442,7 +437,7 @@ section{
 }
 
 .posts-container{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .article-card{
@@ -454,7 +449,7 @@ section{
     margin: 2.2rem 1.5rem;
     overflow: hidden;
     position: relative;
-    box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
+    box-shadow: 20px 20px 30px rgba(159, 159, 159, 0.05);
   }
   
 .article-card-img{
