@@ -45,3 +45,35 @@ function toggleNav() {
         closeBtn.classList.remove("hide");
     }
 }
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+/*=============== SERVICES MODAL ===============*/
+const modalViews = document.querySelectorAll('.categories-modal'),
+    modalBtns = document.querySelectorAll('.categories-button'),
+    modalClose = document.querySelectorAll('.categories-modal-close')
+
+let modal = function (modalClick) {
+    modalViews[modalClick].classList.add('active-modal');
+}
+
+modalBtns.forEach((mb, i) => {
+    mb.addEventListener('click', () => {
+        modal(i);
+    });
+});
+
+modalClose.forEach((mc) => {
+    mc.addEventListener('click', () => {
+        modalViews.forEach((mv) => {
+            mv.classList.remove('active-modal');
+        });
+    });
+});
