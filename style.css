@@ -14,6 +14,7 @@
     --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
 
     --body-color: hsl(var(--second-hue), 100%, 99%);
+    --secondary-background: #DCDDF7;
 
     --blue-50: #eef4ff;
     --blue-100: #e0ebff;
@@ -117,7 +118,7 @@ header{
 
 .title h1{
     font-family: var(--third-font);
-    font-size: var(--large-size-font);
+    font-size: 1.2rem;
     color: var(--blue-500);
 }
 
@@ -258,7 +259,7 @@ section{
 
 .section-heading{
     font-size: 1.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: .8rem;
     font-family: var(--third-font);
     border-bottom: 2px solid var(--blue-400);
     color: var(--gray-700);
@@ -439,7 +440,7 @@ section{
     height: auto;
     background: #fff;
     border-radius: 1.5rem;
-    margin: 2.2rem 1rem;
+    margin: 2.2rem 0;
     overflow: hidden;
     position: relative;
     border: 1px solid var(--gray-50);
@@ -484,43 +485,47 @@ section{
 
 /* ============= CATEGORIES SECTION ============== */
 
+.categories-background{
+    background-color: #eef4ff80;
+    margin: 4rem 0;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
 .categories{
-    margin: 5rem 0;
+    margin: 2rem 0;
 }
 
 .categories-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     padding-top: 1rem;
+    justify-content: center;
   }
   
   .categories-card {
     width: 150px;
     max-width: 200px;
-    background: linear-gradient(
-        180deg,
-        hsla(222, 94%, 82%, 0),
-        hsla(222, 94%, 82%, 0.04)
-      );
+    background-color: var(--gray-800);
     padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: rgb(204, 219, 232) 2px 2px 4px 0px inset, rgba(255, 255, 255, 0.5) -2px -2px 4px 1px inset;
   }
 
   .category-icon{
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--blue-500);
-    padding: .8rem 0;
+    padding: .5rem 0;
     border-radius: 0.5rem;
   }
 
   .categories-title {
     font-size: var(--small-size-font);
     margin: 1rem 0;
+    color: #fff;
   }
   
   .categories-button {
-    color: var(--first-color);
+    color: var(--blue-400);
     font-size: var(--small-size-font);
     display: flex;
     align-items: center;
@@ -628,6 +633,10 @@ section{
         max-width: 36px;
     }
 
+    .title h1{
+        font-size: var(--large-size-font);
+    }
+
     .home-data h1{
         font-size: 2rem;
     }
@@ -686,6 +695,7 @@ section{
 
     .article-card{
         max-width: 280px;
+        margin: 2.2rem 1.5rem;
     }
 
     .categories-container {
