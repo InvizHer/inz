@@ -25,8 +25,17 @@
                 <img src="logo.png" alt="logo-image">
                 <h1>InvizHer</h1>
             </a>
+
+            <ul class="desktop-nav-list">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#posts">Posts</a></li>
+                <li><a href="posts/?tag=notes">Notes</a></li>
+                <li><a href="posts/?tag=webdev">Webdev</a></li>
+            </ul>
+
             <div class="header-icons">
                 <a class="support-btn"><i class="fa-regular fa-heart"></i></a>
+
                 <div class="toggle-btns">
                     <button class="openbtn" id="openBtn" onclick="toggleNav()"><i class="fa-solid fa-bars-staggered"></i></button>
                     <button class="closebtn hide" id="closeBtn" onclick="toggleNav()"><i class="fa-solid fa-xmark"></i></button>
@@ -53,10 +62,7 @@
                     <h1>Pavan Magar</h1>
                     <h3>Computer Science Student</h3>
                 </div>
-
-                <div class="home-profile">
-                    <img src="profile.png" alt="" class="profile-img">
-                </div>
+                
             </div>
         </section>
 
@@ -64,7 +70,9 @@
         <section class="about section" id="about">
 
             <div class="about-container container grid">
-                <img src="assets/img/about.jpg" alt="" class="about-img">
+                <div class="home-profile">
+                    <img src="profile.png" alt="" class="profile-img">
+                </div>
 
                 <div class="about-data">
                     <div class="about-boxes">
@@ -100,9 +108,11 @@
             </div>
         </section>
 
-        <section class="posts" >
-            <p class="section-sub-heading">Explore Articles</p>
-            <h2 class="section-heading">Latest Posts</h2>
+        <section class="posts container" >
+            <div class="section-headings">
+                <p class="section-sub-heading">Explore Articles</p>
+                <h2 class="section-heading">Latest Posts</h2>
+            </div>
 
             <div class="posts-container container">
                 <article class="article-card">
@@ -145,8 +155,253 @@
                 </article>
             </div>
 
-            <a href="#" class="button">View all Posts ➜</a>
+            <a href="#" class="view-all button">View all Posts ➜</a>
         </section>
+
+
+        <!--=================== CATEGORIES SECTION =================-->
+
+        <section class="categories">
+            <div class="section-headings">
+                <p class="section-sub-heading">Browse Main</p>
+                <h2 class="section-heading">Categories</h2>
+            </div>
+
+            <div class="categories-container container grid">
+                <div class="categories-card">
+                    <i class="fa-solid fa-laptop-code category-icon"></i>
+                    <h3 class="categories-title">Latest <br> Projects</h3>
+
+                    <span class="categories-button">
+                        See more <i class='bx bx-right-arrow-alt categories-icon'></i>
+                    </span>
+
+                    <div class="categories-modal">
+                        <div class="categories-modal-content">
+                            <i class='bx bx-x categories-modal-close'></i>
+
+                            <h3 class="categories-modal-title">Product Designer</h3>
+                            <p class="categories-modal-description">
+                                Service with more than 3 years of experience.
+                                Providing quality work to clients and companies.
+                            </p>
+
+                            <ul class="categories-modal-list">
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I develop the user interface.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        Web page development.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I create ux element interactions.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I position your company brand.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        Design and mockups of products for companies.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="categories-card">
+                    <i class="fa-solid fa-file-code category-icon"></i>
+                    <h3 class="categories-title">Notes <br> Handwitten</h3>
+
+                    <span class="categories-button">
+                        See more <i class='bx bx-right-arrow-alt categories-icon'></i>
+                    </span>
+
+                    <div class="categories-modal">
+                        <div class="categories-modal-content">
+                            <i class='bx bx-x categories-modal-close'></i>
+
+                            <h3 class="categories-modal-title">Ui/Ux Designer</h3>
+                            <p class="categories-modal-description">
+                                Service with more than 3 years of experience.
+                                Providing quality work to clients and companies.
+                            </p>
+
+                            <ul class="categories-modal-list">
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I develop the user interface.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        Web page development.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I create ux element interactions.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I position your company brand.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        Design and mockups of products for companies.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="categories-card">
+                    <i class="fa-solid fa-user-tie category-icon"></i>
+                    <h3 class="categories-title">Interview <br> Preparation</h3>
+
+                    <span class="categories-button">
+                        See more <i class='bx bx-right-arrow-alt categories-icon'></i>
+                    </span>
+
+                    <div class="categories-modal">
+                        <div class="categories-modal-content">
+                            <i class='bx bx-x categories-modal-close'></i>
+
+                            <h3 class="categories-modal-title">Ui/Ux Designer</h3>
+                            <p class="categories-modal-description">
+                                Service with more than 3 years of experience.
+                                Providing quality work to clients and companies.
+                            </p>
+
+                            <ul class="categories-modal-list">
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I develop the user interface.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        Web page development.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I create ux element interactions.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I position your company brand.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        Design and mockups of products for companies.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="categories-card">
+                    <i class="fa-solid fa-gears category-icon"></i>
+                    <h3 class="categories-title">Other <br> Resources</h3>
+
+                    <span class="categories-button">
+                        See more <i class='bx bx-right-arrow-alt categories-icon'></i>
+                    </span>
+
+                    <div class="categories-modal">
+                        <div class="categories-modal-content">
+                            <i class='bx bx-x categories-modal-close'></i>
+
+                            <h3 class="categories-modal-title">Visual Designer</h3>
+                            <p class="categories-modal-description">
+                                Service with more than 3 years of experience.
+                                Providing quality work to clients and companies.
+                            </p>
+
+                            <ul class="categories-modal-list">
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I develop the user interface.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        Web page development.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I create ux element interactions.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        I position your company brand.
+                                    </p>
+                                </li>
+
+                                <li class="categories-modal-item">
+                                    <i class='bx bx-check categories-modal-icon'></i>
+                                    <p class="categories-modal-info">
+                                        Design and mockups of products for companies.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
     
