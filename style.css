@@ -261,7 +261,7 @@ section{
     font-size: 1.5rem;
     padding-bottom: .8rem;
     font-family: var(--third-font);
-    border-bottom: 2px solid var(--blue-400);
+    border-bottom: 2px solid var(--blue-500);
     color: var(--gray-700);
 }
 
@@ -427,7 +427,6 @@ section{
 
 
 .posts{
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -443,7 +442,7 @@ section{
     margin: 2.2rem 0;
     overflow: hidden;
     position: relative;
-    border: 1px solid var(--gray-50);
+    border: 1px solid var(--gray-100);
   }
 
 
@@ -486,9 +485,9 @@ section{
 /* ============= CATEGORIES SECTION ============== */
 
 .categories-background{
-    background-color: #eef4ff80;
+    background-color: var(--gray-900);
     margin: 4rem 0;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     width: 100%;
 }
 
@@ -615,6 +614,53 @@ section{
     visibility: visible;
   }
 
+  /*================== PROJECTS SECTION ==============*/
+
+  .projects{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.project-card{
+    width: auto;
+    max-width: 350px;
+    height: auto;
+    background: #fff;
+    border-radius: 1.5rem;
+    margin: 2.2rem 0;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--gray-100);
+    padding: 1rem;
+    box-shadow: 0 1px 1px rgba(162, 161, 161, 0.12), 0 1px 1px rgba(169, 167, 167, 0.24);
+  }
+
+.project-image{
+    width: 100%;
+    height: auto;
+    max-height: 15rem;
+    object-fit: cover;
+    border-radius: 0;
+    border-radius: 1rem;
+}
+
+  
+.project-title{
+    color: var(--gray-700);
+    padding: 1rem .4rem;
+    font-size: 1.2rem;
+}
+
+.project-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .4rem;
+}
+
 
 @media screen and (min-width: 767px){
 
@@ -662,6 +708,10 @@ section{
     }
 
     .posts{
+        margin-top: 2rem;
+    }
+
+    .projects{
         margin-top: 8rem;
     }
 
@@ -697,6 +747,7 @@ section{
         max-width: 280px;
         margin: 2.2rem 1.5rem;
     }
+    
 
     .categories-container {
         grid-template-columns: repeat(2, 192px);
@@ -706,6 +757,17 @@ section{
     .categories-card {
         padding: 2rem 1.5rem;
         width: 175px;
+    }
+
+    .projects-container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .project-card{
+        max-width: 280px;
+        margin: 2.2rem 1.5rem;
     }
 }
 
@@ -792,6 +854,17 @@ section{
   .categories-card {
     padding: 2rem 1.5rem;
     width: 185px;
+  }
+
+  .projects-container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .project-card{
+    margin: 1rem 2rem;
   }
 
 }
