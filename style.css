@@ -91,7 +91,6 @@ header{
     top: 0;
     z-index: 1000;
     padding-top: 1px;
-    background-color: var(--body-color);
 }
 
 .header-items{
@@ -99,9 +98,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--blue-50);
+    background-color: rgba(169, 183, 252, 0.35);;
     border-radius: 4rem;
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
     transition: 0.4s;
     padding: 0.9rem 1.5rem;
 }
@@ -427,6 +426,7 @@ section{
 
 
 .posts{
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -443,6 +443,7 @@ section{
     overflow: hidden;
     position: relative;
     border: 1px solid var(--gray-100);
+    padding: .5rem;
   }
 
 
@@ -457,11 +458,11 @@ section{
     height: auto;
     max-height: 15rem;
     object-fit: cover;
-    border-radius: 0;
+    border-radius: 1rem;
 }
 
 .article-data{
-    padding: 0 1rem;
+    padding: 0 .7rem;
 }
   
 .article-title{
@@ -495,6 +496,11 @@ section{
     margin: 2rem 0;
 }
 
+.categories .section-headings .section-heading,
+.categories .section-headings .section-sub-heading{
+    color: #FFF;
+}
+
 .categories-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -521,6 +527,7 @@ section{
     font-size: var(--small-size-font);
     margin: 1rem 0;
     color: #fff;
+    font-weight: 600;
   }
   
   .categories-button {
@@ -617,7 +624,6 @@ section{
   /*================== PROJECTS SECTION ==============*/
 
   .projects{
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -634,8 +640,7 @@ section{
     overflow: hidden;
     position: relative;
     border: 1px solid var(--gray-100);
-    padding: 1rem;
-    box-shadow: 0 1px 1px rgba(162, 161, 161, 0.12), 0 1px 1px rgba(169, 167, 167, 0.24);
+    padding: .7rem;
   }
 
 .project-image{
@@ -651,7 +656,7 @@ section{
 .project-title{
     color: var(--gray-700);
     padding: 1rem .4rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .project-bottom{
@@ -661,13 +666,109 @@ section{
     padding: .4rem;
 }
 
+.project-bottom p{
+    font-size: .8rem;
+}
+
+/* ============ CONTACT SECTION ============*/
+
+.contact{
+    margin-top: 4rem;
+}
+
+.contact-container {
+    row-gap: 3rem;
+    padding-bottom: 3rem;
+  }
+
+
+.contact-info {
+    display: grid;
+    gap: 1.2rem;
+    margin-top: 2rem
+  }
+
+.contact-card {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1.2rem;
+}
+
+.contact-card i, .contact-card p{
+    font-size: medium;
+    color: #fff;
+}
+
+.insta-handle{
+    background: #833ab4;
+    background: linear-gradient(
+      to right,
+      #833ab4,#fd1d1d,#fcb045
+    );
+}
+
+.github-handle{
+    background:linear-gradient(120deg, var(--gray-700), var(--gray-500));
+}
+
+.telegram-handle{
+    background:linear-gradient(120deg, #0088cc, #10cdfd);
+}
+
+.youtube-handle{
+    background:linear-gradient(120deg, #fb0707, #f65252);
+}
+
+.contact-handle p{
+    font-size: var(--small-size-font);
+}
+
+.contact-form{
+    margin-top: 2rem;
+}
+.contact-form-div {
+    position: relative;
+    margin-bottom: 2rem;
+    height: 4rem;
+}
+
+.contact-form-input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--gray-100);
+    background: none;
+    outline: none;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    z-index: 1;
+}
+
+.contact-form-tag {
+    position: absolute;
+    top: -0.75rem;
+    left: 1.25rem;
+    font-size: var(--small-size-font);
+    padding: 0.25rem;
+    background: var(--body-color);
+    z-index: 10;
+}
+  
+.contact-form-area {
+    height: 11rem;
+}
+  
+.contact-form-area textarea {
+    resize: none;
+}
 
 @media screen and (min-width: 767px){
 
     :root{
         --large-size-font: 1.5rem;
         --medium-size-font: 1.2rem;
-        --small-size-font: 0.95rem;
+        --small-size-font: 0.85rem;
         --tiny-size-font: 0.8rem;
     }
 
@@ -708,16 +809,23 @@ section{
     }
 
     .posts{
-        margin-top: 2rem;
+        margin-top: 8rem;
     }
 
     .projects{
-        margin-top: 8rem;
+        margin-top: 2rem;
     }
 
     .view-all{
         margin: 2rem 0;
     }
+
+    .contact-container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        margin-top: 4rem;
+    }
+
 
 }
 
@@ -866,5 +974,9 @@ section{
   .project-card{
     margin: 1rem 2rem;
   }
+
+  .contact-container{
+    column-gap: 8rem;
+}
 
 }
