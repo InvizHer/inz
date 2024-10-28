@@ -87,10 +87,12 @@ ul{
 /* ================ HEADER AREA =================*/
 
 header{
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     padding-top: 1px;
+    width: 100%;
+    transition: top 0.3s ease-in-out;
 }
 
 .header-items{
@@ -98,7 +100,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(169, 183, 252, 0.35);;
+    background-color: rgb(198 207 247 / 35%);
     border-radius: 4rem;
     backdrop-filter: blur(10px);
     transition: 0.4s;
@@ -190,8 +192,8 @@ nav.sidebar.open {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    background-color: var(--blue-50);
-    backdrop-filter: blur(100px);
+    background-color: #fff;
+    border: 1px solid var(--gray-50);
     border-radius: 1rem;
     padding: 1.3rem 1rem;
     gap: 1.5rem;
@@ -223,7 +225,7 @@ nav.sidebar.open {
 
 main{
     overflow: hidden;
-    margin-top: 2rem;
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -495,7 +497,7 @@ section{
 }
 
 .categories{
-    margin: 2rem 0;
+    margin: 3rem 0;
 }
 
 .categories .section-headings .section-heading,
@@ -587,25 +589,39 @@ section{
     margin-bottom: 2rem;
   }
   
-  .categories-modal-list {
-    display: grid;
-    row-gap: 0.75rem;
-  }
-  
-  .categories-modal-item {
+  .categories-column {
     display: flex;
-    align-items: flex-start;
-    column-gap: 0.5rem;
-  }
-  
-  .categories-modal-icon {
-    font-size: 1.5rem;
-    color: var(--first-color);
-  }
-  
-  .categories-modal-info {
-    font-size: var(--small-size-font);
-  }
+    gap: 20px;
+}
+
+.categories-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.category-list-item i {
+    margin-right: 10px;
+}
+
+.category-list-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
   
   .categories-modal-close {
     position: absolute;
@@ -834,10 +850,9 @@ section{
         display: none;
     }
 
-    header.scrolled {
+    header {
         background-color: #FFF;
         border-bottom: 1px solid var(--gray-50);
-        box-shadow: 0 0px 40px rgba(0, 0, 0, 0.08);
     }
 
     .header-items{
@@ -908,6 +923,10 @@ section{
         max-width: 700px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .header-items{
+        padding: 1.2rem;
     }
 
     .desktop-nav-list{
