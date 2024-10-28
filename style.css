@@ -511,7 +511,6 @@ section{
   }
   
   .categories-card {
-    width: 150px;
     max-width: 200px;
     background-color: var(--gray-800);
     padding: 1.5rem;
@@ -749,7 +748,6 @@ section{
     padding: 1.5rem;
     border-radius: 0.75rem;
     z-index: 1;
-    font-family: var(--third-font);
 }
 
 .contact-form-tag {
@@ -772,6 +770,7 @@ section{
 
 .footer{
     background-color: var(--gray-900);
+    width: 100%;
     margin-top: 1rem;
 }
 
