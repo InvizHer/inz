@@ -24,7 +24,7 @@ function openNav() {
     } else if (hours >= 17 && hours < 20) {
         greetingText = "Good Evening, I'm";
     } else {
-        greetingText = "Good Night, I'm";
+        greetingText = "Good Evening, I'm";
     }
 
     greetingMessage.textContent = greetingText;
@@ -45,15 +45,6 @@ function toggleNav() {
         closeBtn.classList.remove("hide");
     }
 }
-
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 0) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
 
 /*=============== SERVICES MODAL ===============*/
 const modalViews = document.querySelectorAll('.categories-modal'),
@@ -77,3 +68,20 @@ modalClose.forEach((mc) => {
         });
     });
 });
+
+//Header scroll effect
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // User is scrolling down
+            header.style.top = "-100px"; // Adjust as per your header height
+        } else {
+            // User is scrolling up
+            header.style.top = "0";
+        }
+        lastScrollTop = scrollTop;
+    });
