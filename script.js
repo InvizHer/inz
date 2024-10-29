@@ -85,3 +85,32 @@ modalClose.forEach((mc) => {
         }
         lastScrollTop = scrollTop;
     });
+
+/*=============== FILTERS TABS ===============*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".filters-button");
+    const sections = document.querySelectorAll(".filters-container > div");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const target = button.getAttribute("data-target");
+
+            // Toggle active button class
+            buttons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            // Toggle sections visibility
+            sections.forEach(section => {
+                if (section.getAttribute("data-content") === target) {
+                    section.classList.add("filters__active");
+                    section.classList.remove("filter__inactive");
+                } else {
+                    section.classList.add("filter__inactive");
+                    section.classList.remove("filters__active");
+                }
+            });
+        });
+    });
+});
+
