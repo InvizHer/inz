@@ -114,7 +114,7 @@ header{
 }
 
 .title img{
-    max-width: 30px;
+    max-width: 22px;
 }
 
 .title h1{
@@ -385,14 +385,15 @@ section{
 }
 
 .about-icon {
-    font-size: 1.2rem;
-    color: var(--blue-500);
+    font-size: 1.1rem;
+    color: var(--blue-600);
     margin-bottom: 0.5rem;
   }
   
 .about-title {
     font-size: var(--small-size-font);
     color: var(--gray-500);
+    font-weight: 600;
   }
   
 .about-subtitle {
@@ -559,10 +560,15 @@ section{
   }
 
   .category-icon{
-    font-size: 1.1rem;
-    color: var(--blue-700);
-    padding: .5rem 0;
+    font-size: var(--small-size-font);
+    color: #f5f4f4;
+    background-color: var(--blue-700);
+    padding: .5rem;
     border-radius: 0.5rem;
+  }
+
+  .cat-i{
+    padding: 0.5rem 0.7rem;
   }
 
   .categories-title {
@@ -873,7 +879,7 @@ section{
     }
 
     .title img {
-        max-width: 36px;
+        max-width: 28px;
     }
 
     .title h1{
@@ -905,6 +911,10 @@ section{
         background-color: #FFF;
         margin: 0;
         padding: 1.2rem 0;
+    }
+
+    .about-title{
+        font-weight: 700;
     }
 
     .filters-buttons{
