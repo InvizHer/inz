@@ -108,54 +108,106 @@
             </div>
         </section>
 
-        <section class="posts container" >
-            <div class="section-headings">
-                <p class="section-sub-heading">Explore Articles</p>
-                <h2 class="section-heading">Latest Posts</h2>
+        <section class="posts-projects container" >
+
+            <ul class="filters-buttons">
+                <button class="filters-button active" data-target="posts">
+                    Posts
+                </button>
+                <button class="filters-button" data-target="projects">
+                    Projects
+                </button>
+            </ul>
+
+            <div class="filters-container">
+
+                <!--============= Posts =============-->
+                <div class="posts container filters__active" data-content="posts">
+        
+                    <div class="posts-container">
+                        <article class="article-card">
+                            <div class="article-card-img">
+                              <img src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
+                            </div>
+                            <div class="article-data">
+                                <h2 class="article-title">Learn Microinteraction</h2>
+                                <span class="article-time">Monday Jan 20, 2020</span>
+                                <p class="article-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus ex accumsan at.
+                                </p>
+                            </div>
+                        </article>
+        
+                        <article class="article-card">
+                            <div class="article-card-img">
+                              <img src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
+                            </div>
+                            <div class="article-data">
+                                <h2 class="article-title">Learn Microinteraction</h2>
+                                <span class="article-time">Monday Jan 20, 2020</span>
+                                <p class="article-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus ex accumsan at.
+                                </p>
+                            </div>
+                        </article>
+        
+                        <article class="article-card">
+                            <div class="article-card-img">
+                              <img src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
+                            </div>
+                            <div class="article-data">
+                                <h2 class="article-title">Learn Microinteraction</h2>
+                                <span class="article-time">Monday Jan 20, 2020</span>
+                                <p class="article-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus ex accumsan at.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+        
+                    <a href="#" class="view-all button">View all Posts ➜</a>
+                </div>
+        
+
+                <!--============= Projects =============-->
+
+                <div class="projects container filter__inactive" data-content="projects">
+                    <div class="projects-container">
+        
+                        <article class="project-card">
+                            <img class="project-image" src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
+                            <h2 class="project-title">How to make calculator using hml css and js</h2>
+                            <div class="project-bottom">
+                                <p class="project-tag">Python</p>
+                                <p class="project-date">12 Feb 2021</p>
+                            </div>
+                        </article>
+        
+                        <article class="project-card">
+                            <img class="project-image" src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
+                            <h2 class="project-title">Learn Microinteraction</h2>
+                            <div class="project-bottom">
+                                <p class="project-tag">Python</p>
+                                <p class="project-date">12 Feb 2021</p>
+                            </div>
+                        </article>
+        
+                        <article class="project-card">
+                            <img class="project-image" src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
+                            <h2 class="project-title">Learn Microinteraction</h2>
+                            <div class="project-bottom">
+                                <p class="project-tag">Python</p>
+                                <p class="project-date">12 Feb 2021</p>
+                            </div>
+                        </article>
+        
+                    </div>
+        
+                    <a href="#" class="view-all button">Explore more  ➜</a>
+                </div>        
+
             </div>
 
-            <div class="posts-container container">
-                <article class="article-card">
-                    <div class="article-card-img">
-                      <img src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
-                    </div>
-                    <div class="article-data">
-                        <h2 class="article-title">Learn Microinteraction</h2>
-                        <span class="article-time">Monday Jan 20, 2020</span>
-                        <p class="article-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus ex accumsan at.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="article-card-img">
-                      <img src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
-                    </div>
-                    <div class="article-data">
-                        <h2 class="article-title">Learn Microinteraction</h2>
-                        <span class="article-time">Monday Jan 20, 2020</span>
-                        <p class="article-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus ex accumsan at.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="article-card-img">
-                      <img src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
-                    </div>
-                    <div class="article-data">
-                        <h2 class="article-title">Learn Microinteraction</h2>
-                        <span class="article-time">Monday Jan 20, 2020</span>
-                        <p class="article-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus ex accumsan at.
-                        </p>
-                    </div>
-                </article>
-            </div>
-
-            <a href="#" class="view-all button">View all Posts ➜</a>
         </section>
 
 
@@ -381,46 +433,6 @@
             </section>
             
         </div>
-
-        <section class="projects container" >
-            <div class="section-headings">
-                <p class="section-sub-heading">Recent Works</p>
-                <h2 class="section-heading">My Projects</h2>
-            </div>
-
-            <div class="projects-container container">
-
-                <article class="project-card">
-                    <img class="project-image" src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
-                    <h2 class="project-title">How to make calculator using hml css and js</h2>
-                    <div class="project-bottom">
-                        <p class="project-tag">Python</p>
-                        <p class="project-date">12 Feb 2021</p>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <img class="project-image" src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
-                    <h2 class="project-title">Learn Microinteraction</h2>
-                    <div class="project-bottom">
-                        <p class="project-tag">Python</p>
-                        <p class="project-date">12 Feb 2021</p>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <img class="project-image" src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
-                    <h2 class="project-title">Learn Microinteraction</h2>
-                    <div class="project-bottom">
-                        <p class="project-tag">Python</p>
-                        <p class="project-date">12 Feb 2021</p>
-                    </div>
-                </article>
-
-            </div>
-
-            <a href="#" class="view-all button">Explore more  ➜</a>
-        </section>
 
         <!--=========== CONTACT SECTION ==============-->
         <section class="contact" id="contact">
