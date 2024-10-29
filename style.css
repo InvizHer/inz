@@ -5,9 +5,9 @@
     /*===== COLOURS VARIABLES =====*/
     --background-color: #FAF8FF;
     
-    --first-hue: 227;
-    --sat: 89%;
-    --lig: 74%;
+    --first-hue: 213;
+    --sat: 92%;
+    --lig: 49%;
     --second-hue: 219;
 
     --first-color: hsl(var(--first-hue), var(--sat), var(--lig)); 
@@ -16,16 +16,16 @@
     --body-color: hsl(var(--second-hue), 100%, 99%);
     --secondary-background: #DCDDF7;
 
-    --blue-50: #eef4ff;
-    --blue-100: #e0ebff;
-    --blue-200: #c7d9fe;
-    --blue-300: #a5bffc;
-    --blue-400: #819af8;
-    --blue-500: #546aef;
-    --blue-600: #4751e4;
-    --blue-700: #3940c9;
-    --blue-800: #3037a3;
-    --blue-900: #2e3581;
+    --blue-50: #edf9ff;
+    --blue-100: #d7f1ff;
+    --blue-200: #b9e7ff;
+    --blue-300: #88dbff;
+    --blue-400: #50c4ff;
+    --blue-500: #28a6ff;
+    --blue-600: #1188ff;
+    --blue-700: #0a71ee;
+    --blue-800: #0f59be;
+    --blue-900: #134e95;
 
     --gray-50: #f0f1f3;
     --gray-100: #e0e2e8;
