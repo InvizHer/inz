@@ -120,7 +120,7 @@ header{
 .title h1{
     font-family: var(--third-font);
     font-size: 1.2rem;
-    color: var(--blue-500);
+    color: var(--blue-700);
 }
 
 .header-icons{
@@ -262,7 +262,7 @@ section{
     font-size: 1.5rem;
     padding-bottom: .8rem;
     font-family: var(--third-font);
-    border-bottom: 2px solid var(--blue-500);
+    border-bottom: 2px solid var(--blue-700);
     color: var(--gray-700);
 }
 
@@ -273,7 +273,7 @@ section{
   /*=============== BUTTONS ===============*/
 .button {
     display: inline-block;
-    background-color: var(--blue-500);
+    background-color: var(--blue-700);
     color: #FFF;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
@@ -341,7 +341,7 @@ section{
 
 .home-social-link{
     width: max-content;
-    color: var(--blue-500);
+    color: var(--blue-700);
     padding: 0.25rem;
     border-radius: 0.25rem;
     display: flex;
@@ -351,7 +351,7 @@ section{
 }
 
 .home-social-link:hover {
-    background-color: var(--blue-500);
+    background-color: var(--blue-700);
     color: #fff;
   }
 
@@ -386,7 +386,7 @@ section{
 
 .about-icon {
     font-size: 1.2rem;
-    color: var(--blue-400);
+    color: var(--blue-500);
     margin-bottom: 0.5rem;
   }
   
@@ -560,7 +560,7 @@ section{
 
   .category-icon{
     font-size: 1.1rem;
-    color: var(--blue-500);
+    color: var(--blue-700);
     padding: .5rem 0;
     border-radius: 0.5rem;
   }
@@ -573,7 +573,7 @@ section{
   }
   
   .categories-button {
-    color: var(--blue-400);
+    color: var(--blue-500);
     font-size: var(--small-size-font);
     display: flex;
     align-items: center;
@@ -842,7 +842,7 @@ section{
 .footer-title{
     font-family: var(--third-font);
     font-size: 1.4rem;
-    color: var(--blue-500);
+    color: var(--blue-700);
 }
 
 .footer-links{
@@ -946,7 +946,7 @@ section{
     .footer-title{
         font-family: var(--third-font);
         font-size: 1.8rem;
-        color: var(--blue-500);
+        color: var(--blue-700);
     }
     
     .footer-links{
