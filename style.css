@@ -414,19 +414,34 @@ section{
 
 /*=================== POSTS SECTION ===================== */
 
-.filters-buttons {
+.filters-buttons{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-color: hsla(180, 6%, 93%, 0.637);
+    padding: .375rem;
+    border-radius: .75rem;
     display: flex;
-    gap: 1rem;
-}
-
-.filters-button {
-    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    column-gap: .5rem;
+    max-width: 300px;
+  }  
+  .filters-button{
+    width: 200px;
     border: none;
+    color: var(--gray-700);
+    padding: 1rem;
+    font-size: var(--small-size-font);
+    font-family: var(--second-font);
+    font-weight: 500;
+    border-radius: .75rem;
     cursor: pointer;
-    background-color: hsl(var(--second-hue), 100%, 99%);
-    color: hsl(var(--second-hue), 40%, 50%);
-    transition: background-color 0.3s, color 0.3s;
-}
+    background-color: transparent;
+    transition: .5s;
+  }
+  
+  .filters-button:hover{
+    background-color: var(--body-color);
+  }
 
 .filters-button.active {
     background-color: #fff;
@@ -450,36 +465,9 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
-.filters-buttons{
-    margin: 2rem 0;
-    background-color: hsla(180, 3%, 94%, 0.912);
-    padding: .375rem;
-    border-radius: .75rem;
-    display: flex;
-    justify-content: space-between;
-    column-gap: .5rem;
-    max-width: 300px;
-  }  
-  .filters-button{
-    width: 200px;
-    border: none;
-    outline: none;
-    padding: 1rem;
-    font-size: var(--small-size-font);
-    font-family: var(--second-font);
-    font-weight: 500;
-    border-radius: .75rem;
-    cursor: pointer;
-    background-color: transparent;
-    transition: .3s;
-  }
-  
-  .filters-button:hover{
-    background-color: var(--body-color);
-  }
 
 .posts{
     display: flex;
@@ -919,10 +907,9 @@ section{
         padding: 1.2rem 0;
     }
 
-    .posts-projects{
-        margin-top: 8rem;
+    .filters-buttons{
+        margin-bottom: 1rem;
     }
-
     .posts{
         margin-top: 2rem;
     }
