@@ -114,3 +114,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Retrieve values from form fields
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('message').value;
+
+    // Define the recipient, subject, and body content
+    const recipient = "invizher@gmail.com";
+    const subject = "I want to discuss about...";
+    const body = `Name: ${name}\n\nMessage: ${message}`;
+
+    // Create the mailto link
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open the user's email client with the pre-filled email
+    window.location.href = mailtoLink;
+});
