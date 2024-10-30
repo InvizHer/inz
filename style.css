@@ -543,7 +543,11 @@ section{
 /* ============= CATEGORIES SECTION ============== */
 
 .categories-background{
-    background-color: var(--gray-900);
+    background: linear-gradient(
+        180deg,
+        hsla(var(--first-hue), var(--sat), var(--lig), 0.1),
+        hsla(var(--first-hue), var(--sat), var(--lig), 0.017)
+      );
     margin: 4rem 0;
     padding-bottom: 3rem;
     width: 100%;
@@ -551,11 +555,6 @@ section{
 
 .categories{
     margin: 3rem 0;
-}
-
-.categories .section-headings .section-heading,
-.categories .section-headings .section-sub-heading{
-    color: #FFF;
 }
 
 .categories-container {
@@ -586,12 +585,12 @@ section{
     font-size: var(--small-size-font);
     color: #f5f4f4;
     background-color: var(--blue-700);
-    padding: .5rem;
+    padding: .7rem;
     border-radius: 0.5rem;
   }
 
   .cat-i{
-    padding: 0.5rem 0.65rem;
+    padding: 0.7rem 0.9rem;
   }
 
   .categories-title {
