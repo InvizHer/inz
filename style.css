@@ -559,17 +559,27 @@ section{
 }
 
 .categories-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1.5rem;
     padding-top: 1rem;
     justify-content: center;
   }
   
   .categories-card {
-    max-width: 200px;
     background-color: var(--gray-800);
     padding: 1.5rem;
     border-radius: 1rem;
+  }
+
+  .category{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .category-title{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
   }
 
   .category-icon{
@@ -943,6 +953,15 @@ section{
 
     .view-all{
         margin: 2rem 0;
+    }
+
+    .category-title{
+        flex-direction: column;
+    }
+
+    .category{
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact-container{
