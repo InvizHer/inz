@@ -137,6 +137,7 @@ header{
 .support-btn{
     color: var(--gray-700);
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .openbtn{
@@ -146,9 +147,21 @@ header{
     font-size: 1rem;
 }
 
-.support-btn {
-    cursor: pointer;
+
+.support-btn i {
+    color: var(--gray-700); 
+    transition: color 0.3s ease, transform 0.3s ease; 
+  }
+  
+.support-btn:hover i,
+.support-btn.clicked i {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--blue-700);
+    transform: scale(1.05); 
 }
+
+
 
 /* Container for open and close buttons */
 .toggle-btns {
@@ -486,7 +499,7 @@ section{
     margin: 2.2rem 0;
     overflow: hidden;
     position: relative;
-    border: 1px solid var(--gray-100);
+    border: 1px solid var(--gray-50);
     padding: .5rem;
   }
 
@@ -568,7 +581,7 @@ section{
   }
 
   .cat-i{
-    padding: 0.5rem 0.7rem;
+    padding: 0.5rem 0.65rem;
   }
 
   .categories-title {
@@ -579,7 +592,7 @@ section{
   }
   
   .categories-button {
-    color: var(--blue-500);
+    color: var(--blue-600);
     font-size: var(--small-size-font);
     display: flex;
     align-items: center;
@@ -704,7 +717,7 @@ section{
     margin: 2.2rem 0;
     overflow: hidden;
     position: relative;
-    border: 1px solid var(--gray-100);
+    border: 1px solid var(--gray-50);
     padding: .7rem;
   }
 
