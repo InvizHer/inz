@@ -464,20 +464,20 @@
 
                 <div class="contact-content cnt-form">
 
-                    <form action="" class="contact-form">
+                    <form id="contact-form" class="contact-form">
                         <div class="contact-form-div">
-                            <label for="" class="contact-form-tag">Names</label>
-                            <input type="text" placeholder="Insert your name" class="contact-form-input">
+                            <label for="name" class="contact-form-tag">Names</label>
+                            <input type="text" id="name" name="name" placeholder="Insert your name" class="contact-form-input" required>
                         </div>
-
+                    
                         <div class="contact-form-div contact-form-area">
-                            <label for="" class="contact-form-tag">Messege</label>
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Your message here"
-                                class="contact-form-input"></textarea>
+                            <label for="message" class="contact-form-tag">Message</label>
+                            <textarea id="message" name="message" cols="30" rows="10" placeholder="Your message here" class="contact-form-input" required></textarea>
                         </div>
-
-                        <button class="button">Send Message</button>
+                    
+                        <button type="submit" class="button">Send Message</button>
                     </form>
+                    
                 </div>
                 
                 <div class="contact-content">
@@ -521,7 +521,10 @@
 
     <footer class="footer">
         <div class="footer-container container">
-            <h1 class="footer-title">InvizHer</h1>
+            <a href="#" class="title">
+                <img src="logo.png" alt="logo-image">
+                <h1>InvizHer</h1>
+            </a>
             <div class="footer-links">
                 <a href="#">About</a>
                 <a href="#">Terms</a>
