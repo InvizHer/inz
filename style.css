@@ -772,7 +772,7 @@ section{
 .contact-info {
     display: grid;
     gap: 1.2rem;
-    margin-top: 2rem
+    margin-top: 1rem
   }
 
 .contact-card {
@@ -786,6 +786,10 @@ section{
 .contact-card i, .contact-card p{
     font-size: medium;
     color: #fff;
+}
+
+.social-card{
+    display: none;
 }
 
 .social-title{
@@ -817,7 +821,7 @@ section{
 }
 
 .contact-form{
-    margin-top: 2rem;
+    margin: 1rem;
 }
 .contact-form-div {
     position: relative;
@@ -834,6 +838,8 @@ section{
     padding: 1.5rem;
     border-radius: 0.75rem;
     z-index: 1;
+    font-family: var(--third-font);
+    font-size: var(--small-size-font);
 }
 
 .contact-form-tag {
@@ -867,6 +873,19 @@ section{
     padding: 2rem 0 .5rem 0;
 }
 
+.footer-social{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    margin: .5rem;
+}
+
+.footer-social a{
+    padding: .4rem .6rem;
+    background-color: var(--gray-800);
+    border-radius: .4rem;
+    color: var(--gray-400);
+}
 
 .footer-links{
     margin-bottom: 1.2rem;
@@ -963,6 +982,10 @@ section{
         grid-template-columns: repeat(2, 1fr);
         column-gap: 4rem;
         margin-top: 4rem;
+    }
+
+    .social-card{
+        display: block;
     }
 
     .social-title{
