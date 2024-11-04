@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvizHer | Home</title>
+
+    <!--Linked Files-->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/posts/style.css" />
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <style>
+        /* Add these styles to your style.css file */
+
+/* Home page posts and projects styles */
+.posts-container,
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.home-post-card,
+.home-project-card {
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+}
+
+.home-post-card:hover,
+.home-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.post-image,
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-content,
+.project-content {
+  padding: 1.5rem;
+}
+
+.post-meta,
+.project-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.post-date,
+.project-date {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.post-category,
+.project-category {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--light-bg);
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.post-title,
+.project-title {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.post-description,
+.project-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .posts-container,
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.progress-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.156);
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Remove default button padding */
+}
+
+.progress-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.progress-btn:hover {
+  transform: translateY(-3px);
+}
+
+.progress-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure SVG takes full width of button */
+  height: 100%; /* Ensure SVG takes full height of button */
+  transform: rotate(-90deg); /* Start progress from top */
+}
+
+.progress-circle-bg {
+  stroke-dasharray: 150.796; /* Circumference of circle (2 * π * r) */
+  stroke-dashoffset: 0;
+}
+
+.progress-circle-path {
+  stroke-dasharray: 150.796;
+  stroke-dashoffset: 150.796; /* Initially full offset (no progress) */
+  transition: stroke-dashoffset 0.1s ease;
+}
+
+.arrow-icon {
+  position: relative;
+  z-index: 2;
+  color: #4CAF50;
+}
+    </style>
+</head>
+<body>
+
+    <button class="progress-btn">
+        <!-- SVG for circular progress -->
+        <svg class="progress-circle" width="50" height="50" viewBox="0 0 50 50">
+          <!-- Background circle -->
+          <circle class="progress-circle-bg" cx="25" cy="25" r="24" fill="none" stroke="#e6e6e6" stroke-width="2"/>
+          <!-- Progress circle -->
+          <circle class="progress-circle-path" cx="25" cy="25" r="24" fill="none" stroke="#4CAF50" stroke-width="2"/>
+        </svg>
+        <!-- Arrow icon -->
+        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <header>
+        <div class="header-items">
+            <a href="#" class="title">
+                <img src="logo.png" alt="logo-image">
+                <h1>InvizHer</h1>
+            </a>
+
+            <ul class="desktop-nav-list">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#posts">Posts</a></li>
+                <li><a href="posts/?tag=notes">Notes</a></li>
+                <li><a href="posts/?tag=webdev">Webdev</a></li>
+            </ul>
+
+            <div class="header-icons">
+                <a class="support-btn" onclick="toggleDonorHeart(this)">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+                  
+
+                <div class="toggle-btns">
+                    <button class="openbtn" id="openBtn" onclick="toggleNav()"><i class="fa-solid fa-bars-staggered"></i></button>
+                    <button class="closebtn hide" id="closeBtn" onclick="toggleNav()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+        </div>
+        <nav class="sidebar" id="mySidebar">
+            <ul class="nav-list">
+                <li><i class="fa-solid fa-house"></i><a href="#Home">Home</a></li>
+                <li><i class="fa-solid fa-file-pen"></i><a href="posts">Posts</a></li>
+                <li><i class="fa-solid fa-file-code"></i><a href="posts/?tag=notes">Notes</a></li>
+                <li><i class="fa-brands fa-html5"></i><a href="posts/?tag=webdev">Webdev</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--======================== MAIN CONTENT ===================-->
+    <main>
+
+        <section class="home section" id="home">
+            <div class="home-container container">
+                <div class="home-data">
+                    <span id="greeting-message"></span>
+                    <h1>Pavan Magar</h1>
+                    <h3>Com Science Student</h3>
+                </div>
+                
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="about section" id="about">
+
+            <div class="about-container container grid">
+                <div class="home-illustration">
+                    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/a7e0f639-fe19-40f0-b22d-9fee83ca4a88/Zw27c15V2W.json" background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+                </div>
+
+                <div class="about-data">
+                    <div class="about-boxes">
+                        <div class="about-box">
+                            <i class='bx bxs-graduation about-icon'></i>
+                            <h3 class="about-title">Academic</h3>
+                            <span class="about-subtitle">BCA - MCA</span>
+                        </div>
+
+                        <div class="about-box">
+                            <i class='bx bx-book-bookmark about-icon'></i>
+                            <h3 class="about-title">Worked</h3>
+                            <span class="about-subtitle">48 + Projects</span>
+                        </div>
+
+                        <div class="about-box">
+                            <i class='bx bx-world about-icon'></i>
+                            <h3 class="about-title">Social</h3>
+                            <span class="about-subtitle">15k + Followers</span>
+                        </div>
+                    </div>
+
+                    <p class="about-description">
+                        From Pune Maharashtra, India with focus on software and web development. Here's a goal-driven creative mindset to solve the problems and passion for learning and innovating new things in a world of development.
+                    </p>
+
+                    <div class="about-buttons">
+                        <a href="#" class="button">Support Me <i style="margin-left: 4px;" class="fa-regular fa-heart"></i> </a>
+                        <a href="#" class="button">Contact Me <i style="margin-left: 4px;" class="fa-regular fa-envelope"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="posts-projects container" >
+
+            <ul class="filters-buttons">
+                <button class="filters-button active" data-target="posts">
+                    Posts
+                </button>
+                <button class="filters-button" data-target="projects">
+                    Projects
+                </button>
+            </ul>
+
+            <div class="filters-container">
+
+                <!--============= Posts =============-->
+                <div class="posts container filters__active" data-content="posts">
+        
+                    <div class="posts-container">
+                        
+                    </div>
+        
+                    <a href="#" class="view-all button">View all Posts ➜</a>
+                </div>
+        
+
+                <!--============= Projects =============-->
+
+                <div class="projects container filter__inactive" data-content="projects">
+                    <div class="projects-container">
+        
+                    </div>
+        
+                    <a href="#" class="view-all button">Explore more  ➜</a>
+                </div>        
+
+            </div>
+
+        </section>
+
+
+        <!--=================== CATEGORIES SECTION =================-->
+
+        <div class="categories-background">
+
+            <section class="categories">
+                <div class="section-headings">
+                    <p class="section-sub-heading">Browse Main</p>
+                    <h2 class="section-heading">Categories</h2>
+                </div>
+    
+                <div class="categories-container container grid">
+                    <div class="categories-card">
+                        <div class="category">
+                            <div class="category-title">
+                                <i class="fa-solid fa-laptop-code category-icon"></i>
+                            <h3 class="categories-title">Latest  Projects</h3>
+                            </div>
+        
+                            <span class="categories-button">
+                                See more <i class='bx bx-right-arrow-alt categories-icon'></i>
+                            </span>
+                        </div>
+    
+                        <div class="categories-modal">
+                            <div class="categories-modal-content">
+                                <i class='bx bx-x categories-modal-close'></i>
+    
+                                <h3 class="categories-modal-title">Product Designer</h3>
+    
+                                <div class="categories-column">
+                                    <ul class="categories-list">
+                                        <li class="category-list-item"><i class="fas fa-code"></i> Web Dev</li>
+                                        <li class="category-list-item"><i class="fas fa-pencil-alt"></i> Notes</li>
+                                        <li class="category-list-item"><i class="fas fa-music"></i> Music</li>
+                                        <li class="category-list-item"><i class="fas fa-book"></i> Books</li>
+                                        <li class="category-list-item"><i class="fas fa-camera"></i> Photography</li>
+                                    </ul>
+                                    <ul class="categories-list">
+                                        <li class="category-list-item"><i class="fas fa-film"></i> Movies</li>
+                                        <li class="category-list-item"><i class="fas fa-gamepad"></i> Games</li>
+                                        <li class="category-list-item"><i class="fas fa-car"></i> Travel</li>
+                                        <li class="category-list-item"><i class="fas fa-heart"></i> Health</li>
+                                        <li class="category-list-item"><i class="fas fa-utensils"></i> Food</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="categories-card">
+                        <div class="category">
+                            <div class="category-title">
+                                <i class="fa-solid fa-file-code category-icon cat-i"></i>
+                                <h3 class="categories-title">Language Notes</h3>
+                            </div>
+        
+                            <span class="categories-button">
+                                See more <i class='bx bx-right-arrow-alt categories-icon'></i>
+                            </span>
+                        </div>
+    
+                        <div class="categories-modal">
+                            <div class="categories-modal-content">
+                                <i class='bx bx-x categories-modal-close'></i>
+    
+                                <h3 class="categories-modal-title">Ui/Ux Designer</h3>
+                                <p class="categories-modal-description">
+                                    Service with more than 3 years of experience.
+                                    Providing quality work to clients and companies.
+                                </p>
+    
+                                <ul class="categories-modal-list">
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            I develop the user interface.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            Web page development.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            I create ux element interactions.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            I position your company brand.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            Design and mockups of products for companies.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="categories-card">
+                        <div class="category">
+                            <div class="category-title">
+                                <i class="fa-solid fa-user-tie category-icon cat-i"></i>
+                                <h3 class="categories-title">Interview Stuff</h3>
+                            </div>
+        
+                            <span class="categories-button">
+                                See more <i class='bx bx-right-arrow-alt categories-icon'></i>
+                            </span>
+                        </div>
+    
+                        <div class="categories-modal">
+                            <div class="categories-modal-content">
+                                <i class='bx bx-x categories-modal-close'></i>
+    
+                                <h3 class="categories-modal-title">Ui/Ux Designer</h3>
+                                <p class="categories-modal-description">
+                                    Service with more than 3 years of experience.
+                                    Providing quality work to clients and companies.
+                                </p>
+    
+                                <ul class="categories-modal-list">
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            I develop the user interface.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            Web page development.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            I create ux element interactions.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            I position your company brand.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            Design and mockups of products for companies.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="categories-card">
+                        <div class="category">
+                            <div class="category-title">
+                                <i class="fa-solid fa-gears category-icon"></i>
+                                <h3 class="categories-title">Other Resources</h3>
+                            </div>
+        
+                            <span class="categories-button">
+                                See more <i class='bx bx-right-arrow-alt categories-icon'></i>
+                            </span>
+                        </div>
+    
+                        <div class="categories-modal">
+                            <div class="categories-modal-content">
+                                <i class='bx bx-x categories-modal-close'></i>
+    
+                                <h3 class="categories-modal-title">Visual Designer</h3>
+                                <p class="categories-modal-description">
+                                    Service with more than 3 years of experience.
+                                    Providing quality work to clients and companies.
+                                </p>
+    
+                                <ul class="categories-modal-list">
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            I develop the user interface.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            Web page development.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            I create ux element interactions.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            I position your company brand.
+                                        </p>
+                                    </li>
+    
+                                    <li class="categories-modal-item">
+                                        <i class='bx bx-check categories-modal-icon'></i>
+                                        <p class="categories-modal-info">
+                                            Design and mockups of products for companies.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+
+        <!--=========== CONTACT SECTION ==============-->
+        <section class="contact" id="contact">
+            <div class="section-headings">
+                <p class="section-sub-heading">Get in touch</p>
+                <h2 class="section-heading">Contact Me</h2>
+            </div>
+
+            <div class="contact-container container grid">
+
+                <div class="contact-content cnt-form">
+
+                    <form id="contact-form" class="contact-form">
+                        <div class="contact-form-div">
+                            <label for="name" class="contact-form-tag">Names</label>
+                            <input type="text" id="name" name="name" placeholder="Insert your name" class="contact-form-input" required>
+                        </div>
+                    
+                        <div class="contact-form-div contact-form-area">
+                            <label for="message" class="contact-form-tag">Message</label>
+                            <textarea id="message" name="message" cols="30" rows="10" placeholder="Your message here" class="contact-form-input" required></textarea>
+                        </div>
+                    
+                        <button type="submit" class="button">Send Message</button>
+                    </form>
+                    
+                </div>
+                
+                <div class="contact-content social-card">
+                    <div class="section-headings social-title">
+                        <p class="section-sub-heading">Follow on Social</p>
+                        <h2 class="section-heading">Social Icons</h2>
+                    </div>
+
+                    <div class="contact-info">
+                        <a class="contact-card insta-handle">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>Messege on Insatgram</p>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a class="contact-card telegram-handle">
+                            <i class="fa-brands fa-telegram"></i>
+                            <p>Messege on Telegram</p>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a class="contact-card youtube-handle">
+                            <i class="fa-brands fa-youtube"></i>
+                            <p>Subscribe on Youtube</p>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a class="contact-card github-handle">
+                            <i class="fa-brands fa-github"></i>
+                            <p>Explore GitHub Codes</p>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <a href="#" class="title">
+                <img src="logo.png" alt="logo-image">
+                <h1>InvizHer</h1>
+            </a>
+            <div class="footer-social">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-telegram"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+            <p class="copyright">© InvizHer-2024. All rigths reserved</p>
+        </div>
+    </footer>
+    
+    <div class="invizher-donation-popup" id="invizherDonationPopup">
+        <div class="invizher-donation-content">
+          <span class="invizher-popup-close" onclick="closeInvizherDonation()">&times;</span>
+          
+          <div class="invizher-scrollable-content">
+            <div class="invizher-popup-header">
+              <div class="invizher-heart-animation">❤️</div>
+              <h2>Support InvizHer</h2>
+              <p>Your support helps us create more amazing content!</p>
+            </div>
+      
+            <div class="invizher-amount-grid">
+              <button class="invizher-amount-option" data-amount="100">₹100</button>
+              <button class="invizher-amount-option" data-amount="200">₹200</button>
+              <button class="invizher-amount-option" data-amount="500">₹500</button>
+              <button class="invizher-amount-option" data-amount="1000">₹1000</button>
+            </div>
+      
+            <div class="invizher-custom-amount">
+              <label>Amount</label>
+              <div class="invizher-input-wrapper">
+                <span class="invizher-currency">₹</span>
+                <input type="number" id="invizherCustomAmount" placeholder="Enter amount">
+              </div>
+            </div>
+      
+            <div class="invizher-message-box">
+              <label>Add a Message (Optional)</label>
+              <textarea id="invizherDonationMessage" placeholder="Your message of support..."></textarea>
+            </div>
+      
+            <div class="invizher-payment-methods">
+              <button class="invizher-upi-btn" onclick="handleInvizherUPIPayment()">
+                <img src="upi-icon.png" alt="UPI" class="invizher-payment-icon">
+                Pay via UPI
+              </button>
+              <button class="invizher-international-btn" onclick="handleInvizherInternationalPayment()">
+                <img src="card-icon.png" alt="Card" class="invizher-payment-icon">
+                International Payment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Success Message Popup -->
+      <div class="invizher-success-popup" id="invizherSuccessPopup">
+        <div class="invizher-success-content">
+          <div class="invizher-success-icon">✨</div>
+          <h2>Thank You!</h2>
+          <p>Your contribution means a lot to us.</p>
+          <p class="invizher-amount-text">Amount: ₹<span id="successAmount">0</span></p>
+          <div class="invizher-success-message" id="successMessage"></div>
+          <button onclick="closeSuccessMessage()" class="invizher-success-btn">Close</button>
+        </div>
+      </div>
+      
+      <!-- Device Alert Popup -->
+      <div id="invizherDeviceAlert" class="invizher-device-alert">
+        <div class="invizher-alert-content">
+          <p>Please use your mobile device to make UPI payment</p>
+          <button onclick="closeDeviceAlert()">OK, Got it!</button>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+    <script src="/posts/script.js"></script>
+    
+</body>
+</html>
