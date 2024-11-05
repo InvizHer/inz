@@ -178,15 +178,15 @@ function renderArticles(filteredArticles = null) {
       <article class="article-card">
         <img src="${article.image}" alt="${article.title}" class="article-image">
         <div class="article-content">
-          <div class="article-meta">
-            <span class="article-date">${formatDate(article.date)}</span>
-            <span class="article-category">${article.category}</span>
-          </div>
-          <a href="${article.url}" class="article-title">${article.title}</a>
-          <p class="article-description">${article.description}</p>
           <div class="article-tags">
+            <span class="article-category">${article.category}</span>
             ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
           </div>
+          <h2><a href="${article.url}" class="article-title">${article.title}</a></h2>
+          <div class="article-meta">
+            <span class="article-date">${formatDate(article.date)}</span>
+          </div>
+          <p class="article-description">${article.description}</p>
         </div>
       </article>
     `).join('');
@@ -290,9 +290,9 @@ function initializeEventListeners() {
       const filteredArticles = filterArticles(searchQuery);
       
       if (filteredArticles.length === 0) {
-        showToast('No articles found matching your search.', 'error');
+        showToast('No posts found, Try another search.', 'error');
       } else {
-        showToast(`Found ${filteredArticles.length} articles.`, 'success');
+        showToast(`Found ${filteredArticles.length} search reasults..`, 'success');
       }
       
       currentPage = 1;
@@ -466,13 +466,15 @@ async function loadRelatedPosts() {
   if (relatedArticlesGrid) {
       const relatedHtml = relatedArticles.map(article => `
           <article class="article-card">
-              <img src="${article.image}" alt="${article.title}" class="article-image">
-              <div class="article-content">
-                  <a href="${article.url}" class="article-title">${article.title}</a>
-                  <span class="article-category">${article.category}</span>
-                  <p class="article-description">${article.description}</p>
-              </div>
-          </article>
+        <img src="${article.image}" alt="${article.title}" class="article-image">
+        <div class="article-content">
+          <h2><a href="${article.url}" class="article-title">${article.title}</a></h2>
+          <div class="article-meta">
+            <span class="article-date">${formatDate(article.date)}</span>
+          </div>
+          <p class="article-description">${article.description}</p>
+        </div>
+      </article>
       `).join('');
       
       relatedArticlesGrid.innerHTML = relatedHtml || '<p>No related articles found.</p>';
