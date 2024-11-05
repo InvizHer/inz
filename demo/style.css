@@ -14,7 +14,7 @@
     --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
 
     --body-color: hsl(var(--second-hue), 100%, 99%);
-    --secondary-background: #F5F5FF;
+    --secondary-background: #DCE4EC;
 
     --blue-50: #edf9ff;
     --blue-100: #d7f1ff;
