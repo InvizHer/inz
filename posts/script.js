@@ -14,9 +14,9 @@ const pagination = document.querySelector('.pagination');
 const mockArticles = [
   {
     id: 1,
-    title: 'one Started with Web Development',
-    description: 'Learn the basics of web development with this comprehensive guide.',
-    image: '../html.jpg',
+    title: 'How to Started with Web Development',
+    description: 'Learn the basics of web dev and with dev with this and hduhd dye degbd yueh dhbdb uyge ug this comprehensive guide.',
+    image: 'https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80',
     category: 'webdev',
     tags: ['html', 'css', 'javascript'],
     url: 'article-one.html',
@@ -25,8 +25,8 @@ const mockArticles = [
   {
     id: 2,
     title: 'two Started with Web Development',
-    description: 'Learn the basics of web development with this comprehensive guide.',
-    image: '../html.jpg',
+    description: 'Learn the basics of web dev with this and hduhd dye degbd yueh dhbdb uyge ug comprehensive guide.',
+    image: 'https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80',
     category: 'webdev',
     tags: ['html', 'css', 'javascript'],
     url: 'article-two.html',
@@ -35,8 +35,8 @@ const mockArticles = [
   {
     id: 3,
     title: 'three Started with Web Development',
-    description: 'Learn the basics of web development with this comprehensive guide.',
-    image: '../html.jpg',
+    description: 'Learn the basics of web yeah with this comprehensive guide.',
+    image: 'https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80',
     category: 'webdev',
     tags: ['html', 'css', 'javascript'],
     url: 'article-one.html',
@@ -45,8 +45,8 @@ const mockArticles = [
   {
     id: 4,
     title: 'four Started with Web Development',
-    description: 'Learn the basics of web development with this comprehensive guide.',
-    image: '../html.jpg',
+    description: 'Learn the basics of web jiji with this comprehensive guide.',
+    image: 'https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80',
     category: 'project',
     tags: ['html', 'css', 'javascript'],
     url: 'article-one.html',
@@ -56,7 +56,7 @@ const mockArticles = [
     id: 5,
     title: 'five Started with Web Development',
     description: 'Learn the basics of web development with this comprehensive guide.',
-    image: '../html.jpg',
+    image: 'https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80',
     category: 'project',
     tags: ['html'],
     url: 'article-one.html',
@@ -66,7 +66,7 @@ const mockArticles = [
     id: 6,
     title: 'six Started with Web Development',
     description: 'Learn the basics of web development with this comprehensive guide.',
-    image: '../html.jpg',
+    image: 'https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80',
     category: 'webdev',
     tags: ['webs'],
     url: 'article-one.html',
@@ -76,7 +76,7 @@ const mockArticles = [
     id: 7,
     title: 'Getting Started with Web Development',
     description: 'Learn the basics of web development with this comprehensive guide.',
-    image: '../html.jpg',
+    image: 'https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80',
     category: 'webdev',
     tags: ['html', 'css', 'javascript'],
     url: 'article-one.html',
@@ -86,7 +86,7 @@ const mockArticles = [
     id: 8,
     title: 'Getting Started with Web Development',
     description: 'Learn the basics of web development with this comprehensive guide.',
-    image: '../html.jpg',
+    image: 'https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80',
     category: 'webdev',
     tags: ['html', 'css', 'javascript'],
     url: 'article-one.html',
@@ -96,7 +96,7 @@ const mockArticles = [
     id: 9,
     title: 'Getting Started with Web Development',
     description: 'Learn the basics of web development with this comprehensive guide.',
-    image: '../html.jpg',
+    image: 'https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80',
     category: 'webdev',
     tags: ['html', 'css', 'javascript'],
     url: 'article-one.html',
@@ -108,24 +108,42 @@ const mockArticles = [
 // Initialize the blog
 async function initBlog() {
   articles = await fetchArticles();
-  const urlParams = new URLSearchParams(window.location.search);
-  currentPage = parseInt(urlParams.get('page')) || 1;
-  currentCategory = urlParams.get('category') || '';
   
-  // Add this new block of code
-  if (currentCategory) {
-    categoryButtons.forEach(button => {
-      if (button.dataset.category === currentCategory) {
-        button.classList.add('active');
-      } else {
-        button.classList.remove('active');
-      }
-    });
+  // Check if we're on the home page
+  const isHomePage = document.querySelector('.home');
+  if (isHomePage) {
+    renderHomePagePosts();
+    renderHomePageProjects();
+    return; // Exit early if we're on home page
   }
-  
-  renderArticles();
-  updatePagination();
-  initializeEventListeners();
+
+  // Check if we're on the blog/posts page
+  const isBlogPage = articlesGrid !== null;
+  if (isBlogPage) {
+    const urlParams = new URLSearchParams(window.location.search);
+    currentPage = parseInt(urlParams.get('page')) || 1;
+    currentCategory = urlParams.get('category') || '';
+    
+    if (currentCategory) {
+      categoryButtons.forEach(button => {
+        if (button.dataset.category === currentCategory) {
+          button.classList.add('active');
+        } else {
+          button.classList.remove('active');
+        }
+      });
+    }
+    
+    renderArticles();
+    updatePagination();
+    initializeEventListeners();
+  }
+
+  // Check if we're on an article page
+  const isArticlePage = document.querySelector('.article');
+  if (isArticlePage) {
+    initializeArticlePage();
+  }
 }
 
 // helper function to format the date
@@ -139,7 +157,6 @@ function formatDate(dateString) {
   return new Date(dateString).toLocaleDateString('en-US', options); 
 }
 
-
 // Fetch articles (Replace with actual API call)
 async function fetchArticles() {
   // Simulate API call
@@ -150,6 +167,8 @@ async function fetchArticles() {
 
 // Render articles with loading animation
 function renderArticles(filteredArticles = null) {
+  if (!articlesGrid) return; // Early return if articlesGrid doesn't exist
+  
   const articlesToRender = filteredArticles || filterArticles();
   articlesGrid.style.opacity = '0';
   
@@ -200,43 +219,45 @@ function filterArticles(searchQuery = '') {
 
 // Update pagination
 function updatePagination() {
-    const totalArticles = filterArticles().length;
-    const totalPages = Math.ceil(totalArticles / ARTICLES_PER_PAGE);
+  if (!pagination) return; // Early return if pagination doesn't exist
     
-    let paginationHtml = '';
-    
-    // Calculate page range to show
-    let startPage = Math.max(1, currentPage - 1);
-    let endPage = Math.min(totalPages, currentPage + 1);
-    
-    // Always show first page
-    if (startPage > 1) {
-      paginationHtml += `<button class="pagination-btn" data-page="1">1</button>`;
-      if (startPage > 2) {
-        paginationHtml += `<span>...</span>`;
-      }
+  const totalArticles = filterArticles().length;
+  const totalPages = Math.ceil(totalArticles / ARTICLES_PER_PAGE);
+  
+  let paginationHtml = '';
+  
+  // Calculate page range to show
+  let startPage = Math.max(1, currentPage - 1);
+  let endPage = Math.min(totalPages, currentPage + 1);
+  
+  // Always show first page
+  if (startPage > 1) {
+    paginationHtml += `<button class="pagination-btn" data-page="1">1</button>`;
+    if (startPage > 2) {
+      paginationHtml += `<span>...</span>`;
     }
-    
-    // Show current page and surrounding pages
-    for (let i = startPage; i <= endPage; i++) {
-      paginationHtml += `
-        <button class="pagination-btn ${i === currentPage ? 'active' : ''}"
-                data-page="${i}">
-          ${i}
-        </button>
-      `;
-    }
-    
-    // Always show last page
-    if (endPage < totalPages) {
-      if (endPage < totalPages - 1) {
-        paginationHtml += `<span>...</span>`;
-      }
-      paginationHtml += `<button class="pagination-btn" data-page="${totalPages}">${totalPages}</button>`;
-    }
-    
-    pagination.innerHTML = paginationHtml;
   }
+  
+  // Show current page and surrounding pages
+  for (let i = startPage; i <= endPage; i++) {
+    paginationHtml += `
+      <button class="pagination-btn ${i === currentPage ? 'active' : ''}"
+              data-page="${i}">
+        ${i}
+      </button>
+    `;
+  }
+  
+  // Always show last page
+  if (endPage < totalPages) {
+    if (endPage < totalPages - 1) {
+      paginationHtml += `<span>...</span>`;
+    }
+    paginationHtml += `<button class="pagination-btn" data-page="${totalPages}">${totalPages}</button>`;
+  }
+  
+  pagination.innerHTML = paginationHtml;
+}
 
 // Show toast notification
 function showToast(message, type = 'info') {
@@ -260,49 +281,56 @@ function showToast(message, type = 'info') {
 
 // Initialize event listeners
 function initializeEventListeners() {
-  // Search form submission
-  searchForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const searchQuery = e.target.querySelector('input').value;
-    const filteredArticles = filterArticles(searchQuery);
-    
-    if (filteredArticles.length === 0) {
-      showToast('No articles found matching your search.', 'error');
-    } else {
-      showToast(`Found ${filteredArticles.length} articles.`, 'success');
-    }
-    
-    currentPage = 1;
-    renderArticles(filteredArticles);
-    updatePagination();
-    updateURL();
-  });
-  
-  // Category buttons
-  categoryButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      currentCategory = button.dataset.category;
+  // Only add event listeners if elements exist
+  if (searchForm) {
+    // Search form submission
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const searchQuery = e.target.querySelector('input').value;
+      const filteredArticles = filterArticles(searchQuery);
+      
+      if (filteredArticles.length === 0) {
+        showToast('No articles found matching your search.', 'error');
+      } else {
+        showToast(`Found ${filteredArticles.length} articles.`, 'success');
+      }
+      
       currentPage = 1;
-      
-      categoryButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      
-      renderArticles();
+      renderArticles(filteredArticles);
       updatePagination();
       updateURL();
     });
-  });
+  }
   
-  // Pagination buttons
-  pagination.addEventListener('click', (e) => {
-    if (e.target.classList.contains('pagination-btn')) {
-      currentPage = parseInt(e.target.dataset.page);
-      renderArticles();
-      updatePagination();
-      updateURL();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  });
+  if (categoryButtons.length > 0) {
+    // Category buttons
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        currentCategory = button.dataset.category;
+        currentPage = 1;
+        
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        renderArticles();
+        updatePagination();
+        updateURL();
+      });
+    });
+  }
+  
+  if (pagination) {
+    // Pagination buttons
+    pagination.addEventListener('click', (e) => {
+      if (e.target.classList.contains('pagination-btn')) {
+        currentPage = parseInt(e.target.dataset.page);
+        renderArticles();
+        updatePagination();
+        updateURL();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
 }
 
 // Update URL with current page and category
@@ -322,10 +350,6 @@ function updateURL() {
 }
 
 // Article Page Functions
-if (document.querySelector('.article')) {
-  initializeArticlePage();
-}
-
 function initializeArticlePage() {
   initializeShareButtons();
   initializeCopyLink();
@@ -455,10 +479,6 @@ async function loadRelatedPosts() {
   }
 }
 
-// Initialize blog on load
-document.addEventListener('DOMContentLoaded', initBlog);
-
-
 // ================================ FUNCTIONS FOR HOME PAGE ===============================================//
 
 // Function to sort articles by date
@@ -490,18 +510,16 @@ function renderHomePagePosts() {
       <article class="home-post-card">
         <img src="${post.image}" alt="${post.title}" class="post-image">
         <div class="post-content">
-          <h2><a href="${post.url}" class="post-title">${post.title}</a></h2>
+          <h2><a href="posts/${post.url}" class="post-title">${post.title}</a></h2>
           <div class="post-meta">
             <span class="post-date">${formatDate(post.date)}</span>
-            <!-- <span class="post-category">${post.category}</span> -->
           </div>
           <p class="post-description">${post.description}</p>
         </div>
       </article>
     `)
     .join('');
-
-  postsContainer.innerHTML = postsHTML;
+    postsContainer.innerHTML = postsHTML;
 }
 
 // Function to render projects for home page
@@ -512,14 +530,14 @@ function renderHomePageProjects() {
   const projectPosts = getProjectPosts();
   const projectsHTML = projectPosts
     .map(project => `
-      <article class="home-project-card">
+      <article class="home-post-card">
         <img src="${project.image}" alt="${project.title}" class="post-image">
         <div class="post-content">
+          <h2><a href="posts/${project.url}" class="post-title">${project.title}</a></h2>
           <div class="post-meta">
             <span class="post-date">${formatDate(project.date)}</span>
-            <span class="post-category">${project.category}</span>
+            <!-- <span class="post-category">${project.category}</span> -->
           </div>
-          <h2><a href="${project.url}" class="post-title">${project.title}</a></h2>
           <p class="post-description">${project.description}</p>
         </div>
       </article>
@@ -529,31 +547,5 @@ function renderHomePageProjects() {
   projectsContainer.innerHTML = projectsHTML;
 }
 
-// Update the initBlog function to include home page initialization
-async function initBlog() {
-  articles = await fetchArticles();
-  const urlParams = new URLSearchParams(window.location.search);
-  currentPage = parseInt(urlParams.get('page')) || 1;
-  currentCategory = urlParams.get('category') || '';
-  
-  // Initialize home page if we're on the home page
-  if (document.querySelector('.home')) {
-    renderHomePagePosts();
-    renderHomePageProjects();
-  }
-  
-  // Rest of your existing initBlog code...
-  if (currentCategory) {
-    categoryButtons.forEach(button => {
-      if (button.dataset.category === currentCategory) {
-        button.classList.add('active');
-      } else {
-        button.classList.remove('active');
-      }
-    });
-  }
-  
-  renderArticles();
-  updatePagination();
-  initializeEventListeners();
-}
+// Initialize blog on load
+document.addEventListener('DOMContentLoaded', initBlog);
