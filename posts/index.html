@@ -8,8 +8,8 @@
     <!--Linked Files-->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../demo/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="logo.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,17 +58,19 @@
 
     <!--======================== MAIN CONTENT ===================-->
     <main class="main-content container">
-        <form class="search-section search-form">
-            <input type="text" class="search-input" placeholder="Search articles...">
-            <button type="submit" class="search-button">Search</button>
-        </form>
-
-        <div class="categories">
-            <button class="category-btn active" data-category="">All</button>
-            <button class="category-btn" data-category="webdev">Web Development</button>
-            <button class="category-btn" data-category="notes">Notes</button>
-            <button class="category-btn" data-category="tech">Technology</button>
-            <button class="category-btn" data-category="project">project</button>
+        <div class="main-header">
+            <form class="search-section search-form">
+                <input type="text" class="search-input" placeholder="Search ...">
+                <button type="submit" class="search-button"><i class='bx bx-search-alt'></i></button>
+            </form>
+    
+            <div class="categories">
+                <button class="category-btn active" data-category="">All</button>
+                <button class="category-btn" data-category="webdev">Webdev</button>
+                <button class="category-btn" data-category="notes">Notes</button>
+                <button class="category-btn" data-category="tech">Technology</button>
+                <button class="category-btn" data-category="project">project</button>
+            </div>
         </div>
 
         <div class="articles-grid">
