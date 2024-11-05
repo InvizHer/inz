@@ -390,7 +390,7 @@ section{
 .about-box{
     background: linear-gradient(
         180deg,
-        hsla(var(--first-hue), var(--sat), var(--lig), 0),
+        hsla(var(--first-hue), var(--sat), var(--lig), 0.1),
         hsla(var(--first-hue), var(--sat), var(--lig), 0.1)
       );
     border-radius: 0.75rem;
