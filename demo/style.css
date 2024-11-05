@@ -14,7 +14,7 @@
     --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
 
     --body-color: hsl(var(--second-hue), 100%, 99%);
-    --secondary-background: #DCDDF7;
+    --secondary-background: #F5F5FF;
 
     --blue-50: #edf9ff;
     --blue-100: #d7f1ff;
@@ -101,7 +101,7 @@ header{
     align-items: center;
     justify-content: space-between;
     background-color: rgb(198 207 247 / 35%);
-    border-radius: 4rem;
+    border-radius: 12px;
     backdrop-filter: blur(10px);
     transition: 0.4s;
     padding: 0.9rem 1.5rem;
@@ -120,7 +120,7 @@ header{
 .title h1{
     font-family: var(--third-font);
     font-size: 1.2rem;
-    color: var(--blue-700);
+    color: var(--blue-800);
 }
 
 .header-icons{
@@ -207,7 +207,7 @@ nav.sidebar.open {
     justify-items: center;
     background-color: #fff;
     border: 1px solid var(--gray-50);
-    border-radius: 1rem;
+    border-radius: 12px;
     padding: 1.3rem 1rem;
     gap: 1.5rem;
     margin-top: 1rem;
@@ -276,7 +276,7 @@ section{
     padding-bottom: .8rem;
     font-family: var(--third-font);
     border-bottom: 2px solid var(--blue-700);
-    color: var(--gray-700);
+    color: var(--gray-800);
 }
 
 .section-sub-heading{
@@ -332,7 +332,7 @@ section{
 .home-data h1{
     font-family: var(--third-font);
     font-size: 1.7rem;
-    color: var(--gray-700);
+    color: var(--gray-800);
 }
 
 .home-data h3{
@@ -347,26 +347,6 @@ section{
     margin: 0 0 2rem 1rem;
 }
 
-.home-social{
-    display: flex;
-    align-items: center;
-}
-
-.home-social-link{
-    width: max-content;
-    color: var(--blue-700);
-    padding: 0.25rem;
-    border-radius: 0.25rem;
-    display: flex;
-    font-size: 1.1rem;
-    transition: 0.4s;
-    text-decoration: none;
-}
-
-.home-social-link:hover {
-    background-color: var(--blue-700);
-    color: #fff;
-  }
 
 /* ===================== ABOUT SECTION ========================= */
 .about{
@@ -388,12 +368,8 @@ section{
 }
 
 .about-box{
-    background: linear-gradient(
-        180deg,
-        hsla(var(--first-hue), var(--sat), var(--lig), 0.1),
-        hsla(var(--first-hue), var(--sat), var(--lig), 0.1)
-      );
-    border-radius: 0.75rem;
+    background-color: var(--secondary-background);
+    border-radius: 0.5rem;
     padding: 0.75rem 0.5rem;
 }
 
@@ -492,10 +468,11 @@ section{
 
 .home-post-card{
     width: auto;
-    max-width: 350px;
+    max-width: 300px;
     height: auto;
+    max-height: 350px;
     background: #fff;
-    border-radius: 1rem;
+    border-radius: 12px;
     margin: 2.2rem 0;
     overflow: hidden;
     position: relative;
@@ -516,7 +493,7 @@ section{
     position: relative;
     max-height: 15rem;
     object-fit: cover;
-    border-radius: 1rem;
+    border-radius: 12px;
 }
 
 .post-content {
@@ -527,11 +504,11 @@ section{
   display: flex;
   gap: 1rem;
   align-items: center;
-  margin-bottom: 0.75rem;
+  margin: 1rem 0 0.85rem 0;
 }
 
 .post-date {
-  font-size: var(--small-size-font);
+  font-size: .8rem;
   color: var(--gray-500);
 }
 
@@ -545,19 +522,31 @@ section{
 
 .post-title {
   display: block;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.14rem;
   color: var(--gray-700);
   text-decoration: none;
-  margin-bottom: 0.5rem;
+  font-family: var(--second-font);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .post-description{
   font-size: var(--small-size-font);
   color: var(--gray-500);
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* ============= CATEGORIES SECTION ============== */
 
@@ -572,7 +561,7 @@ section{
     width: 100%;
 }
 
-.categories{
+.home-categories{
     margin: 3rem 0;
 }
 
@@ -586,7 +575,7 @@ section{
   .categories-card {
     background-color: var(--gray-800);
     padding: 1.5rem;
-    border-radius: 1rem;
+    border-radius: 12px;
   }
 
   .category{
@@ -656,7 +645,7 @@ section{
     position: relative;
     background-color: var(--body-color);
     padding: 4.5rem 1.5rem 2.5rem;
-    border-radius: 1.5rem;
+    border-radius: 12px;
   }
   
   .categories-modal-title,
@@ -727,55 +716,6 @@ section{
     visibility: visible;
   }
 
-  /*================== PROJECTS SECTION ==============*/
-
-  .projects{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.project-card{
-    width: auto;
-    max-width: 350px;
-    height: auto;
-    background: #fff;
-    border-radius: 1.5rem;
-    margin: 2.2rem 0;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid var(--gray-50);
-    padding: .7rem;
-  }
-
-.project-image{
-    width: 100%;
-    height: auto;
-    max-height: 15rem;
-    object-fit: cover;
-    border-radius: 0;
-    border-radius: 1rem;
-}
-
-  
-.project-title{
-    color: var(--gray-700);
-    padding: 1rem .4rem;
-    font-size: 1.1rem;
-}
-
-.project-bottom{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: .4rem;
-}
-
-.project-bottom p{
-    font-size: .8rem;
-}
-
 /* ============ CONTACT SECTION ============*/
 
 .contact{
@@ -799,7 +739,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-radius: 1.2rem;
+    border-radius: 12px;
 }
 
 .contact-card i, .contact-card p{
@@ -855,7 +795,7 @@ section{
     background: none;
     outline: none;
     padding: 1.5rem;
-    border-radius: 0.75rem;
+    border-radius: 0.7rem;
     z-index: 1;
     font-family: var(--third-font);
     font-size: var(--small-size-font);
@@ -1162,16 +1102,6 @@ section{
         margin-right: auto;
 
     }
-
-  .home-profile{
-    width: 280px;
-    height: 320px;
-    border-radius: 1.5rem;
-}
-
-.profile-img{
-    max-width: 320px;
-}
   
 .about{
     margin-right: 5rem;
