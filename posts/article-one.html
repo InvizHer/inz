@@ -6,6 +6,7 @@
     <title>InvizHer | Home</title>
 
     <!--Linked Files-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../demo/style.css" />
@@ -65,10 +66,14 @@
                     <span><i class="fa-solid fa-calendar-days"></i> January 15, 2024</span>
                     <span><i class="fa-regular fa-bookmark"></i> Web Development</span>
                 </div>
-                <div class="article-tags">
-                    <span class="tag">html</span>
-                    <span class="tag">css</span>
-                    <span class="tag">javascript</span>
+                <div class="article-info">
+                    <span>10 minutes read</span>
+
+                    <div class="article-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -76,26 +81,53 @@
 
             <div class="article-content">
                 <!-- Article content goes here -->
-                <p>This is where your article content will go. You can include text, images, code blocks, and other elements.</p>
+                <p> <span id="greeting-message"></span> Good to see you here. As you know, today we are going to discuss about making of project "Responsive Mini Portfolio website using HTML CSS and JavaScript". This portfolio website is completely responsive with all devices. Also it is a completely ui/ux design based portfolio website. So without wasting too much time lets get start it to know about it.</p>
+                 <br>
+                <h2>Mini Portfolio Website</h2>
+                <p>This is a simple and responsive portfolio website using HTML CSS and JavaScript. As it's name its a mini sized portfolio website, we used minimum sized components in it. The design of this portfolio website is little bit Ui and UX based. The overall look is just awesome. You can scroll down to watch it's live demo and source code.</p>
+                
+                
+                <h2>Responsive Portfolio Website</h2>
+                <p>This mini portfolio website is completely responsive with every device size. This means that whether a user is accessing the site from a desktop computer, a tablet, or a smartphone, the content and layout will adjust to provide an optimal viewing experience. Website will adjust size of its components automatically as per users device size.</p>
+                <br>
             </div>
 
-            <div class="share-buttons">
-                <button class="share-btn" data-platform="twitter">
-                    🐦 Share on Twitter
-                </button>
-                <button class="share-btn" data-platform="facebook">
-                    📘 Share on Facebook
-                </button>
-                <button class="share-btn" data-platform="linkedin">
-                    💼 Share on LinkedIn
-                </button>
-                <button class="copy-link-btn">
-                    📋 Copy Link
-                </button>
+            <div class="share-section">
+                <h3 class="share-title">Share this article</h3>
+                
+                <div class="share-buttons">
+                  <button class="share-btn" data-platform="twitter">
+                    <i class="ri-twitter-fill"></i>
+                  </button>
+                  <button class="share-btn" data-platform="facebook">
+                    <i class="ri-facebook-fill"></i>
+                  </button>
+                  <button class="share-btn" data-platform="linkedin">
+                    <i class="ri-linkedin-fill"></i>
+                  </button>
+                  <button class="share-btn" data-platform="whatsapp">
+                    <i class="ri-whatsapp-fill"></i>
+                  </button>
+                  <button class="share-btn" data-platform="telegram">
+                    <i class="ri-telegram-fill"></i>
+                  </button>
+                </div>
+              
+                <div class="copy-link-container">
+                  <input type="text" class="url-input" readonly>
+                  <button class="copy-btn">
+                    <span class="copy-icon">
+                      <i class="ri-file-copy-line"></i>
+                    </span>
+                    <span class="check-icon">
+                      <i class="ri-check-line"></i>
+                    </span>
+                  </button>
+                </div>
             </div>
 
             <div class="related-posts">
-                <h2>Related Posts</h2>
+                <h2 class="related-posts-title">Related Posts</h2>
                 <div class="articles-grid">
                     <!-- Related posts will be dynamically loaded here -->
                 </div>
