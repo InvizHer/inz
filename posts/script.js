@@ -364,6 +364,7 @@ function initializeShareButtons() {
       const platform = button.dataset.platform;
       const url = encodeURIComponent(window.location.href);
       const title = encodeURIComponent(document.title);
+      const text = encodeURIComponent("Check out this awesome article!");
       
       let shareUrl;
       switch (platform) {
@@ -376,6 +377,15 @@ function initializeShareButtons() {
         case 'linkedin':
           shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
           break;
+        case 'whatsapp':
+          shareUrl = `https://api.whatsapp.com/send?text=${title}%20${url}`;
+          break;
+        case 'telegram':
+          shareUrl = `https://t.me/share/url?url=${url}&text=${title}`;
+          break;
+        case 'email':
+          shareUrl = `mailto:?subject=${title}&body=Check%20out%20this%20article:%20${url}`;
+          break;
       }
       
       if (shareUrl) {
@@ -386,17 +396,33 @@ function initializeShareButtons() {
 }
 
 function initializeCopyLink() {
-  const copyButton = document.querySelector('.copy-link-btn');
-  if (copyButton) {
-    copyButton.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(window.location.href);
-        showToast('Link copied to clipboard!', 'success');
-      } catch (err) {
-        showToast('Failed to copy link.', 'error');
-      }
-    });
-  }
+  const copyLinkContainer = document.querySelector('.copy-link-container');
+  if (!copyLinkContainer) return;
+
+  const urlInput = copyLinkContainer.querySelector('.url-input');
+  const copyButton = copyLinkContainer.querySelector('.copy-btn');
+
+  // Set current URL in input
+  urlInput.value = window.location.href;
+
+  copyButton.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(urlInput.value);
+      copyButton.classList.add('copied');
+      copyButton.querySelector('.copy-icon').style.display = 'none';
+      copyButton.querySelector('.check-icon').style.display = 'inline-block';
+      
+      setTimeout(() => {
+        copyButton.classList.remove('copied');
+        copyButton.querySelector('.copy-icon').style.display = 'inline-block';
+        copyButton.querySelector('.check-icon').style.display = 'none';
+      }, 2000);
+      
+      showToast('Link copied to clipboard!', 'success');
+    } catch (err) {
+      showToast('Failed to copy link.', 'error');
+    }
+  });
 }
 
 async function loadRelatedPosts() {
