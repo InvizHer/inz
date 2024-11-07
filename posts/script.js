@@ -178,13 +178,10 @@ function renderArticles(filteredArticles = null) {
       <article class="article-card">
         <img src="${article.image}" alt="${article.title}" class="article-image">
         <div class="article-content">
-          <div class="article-tags">
-            <span class="article-category">${article.category}</span>
-            ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-          </div>
           <h2><a href="${article.url}" class="article-title">${article.title}</a></h2>
           <div class="article-meta">
             <span class="article-date">${formatDate(article.date)}</span>
+            <span class="article-category">${article.category}</span>
           </div>
           <p class="article-description">${article.description}</p>
         </div>
