@@ -14,7 +14,7 @@
     --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
 
     --body-color: hsl(var(--second-hue), 100%, 99%);
-    --secondary-background: #DCE4EC;
+    --secondary-background: #f3f1ff;
 
     --blue-50: #edf9ff;
     --blue-100: #d7f1ff;
@@ -100,7 +100,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(198 207 247 / 35%);
+    background-color: #f3f1ff94;
     border-radius: 12px;
     backdrop-filter: blur(10px);
     transition: 0.4s;
@@ -120,7 +120,7 @@ header{
 .title h1{
     font-family: var(--third-font);
     font-size: 1.2rem;
-    color: var(--blue-800);
+    color: var(--blue-700);
 }
 
 .header-icons{
