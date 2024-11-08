@@ -189,21 +189,23 @@ header{
 nav.sidebar {
     width: 100%;
     align-content: center;
-    padding: 0 2rem;
+    padding: 0 1.2rem;
     position: fixed;
     top: 10;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.5s ease-out;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 nav.sidebar.open {
     max-height: 200px;
+    opacity: 1;
 }
 
 .nav-list{
     display: flex;
-    flex-direction: column;
     justify-items: center;
     background-color: #fff;
     border: 1px solid var(--gray-50);
@@ -211,24 +213,25 @@ nav.sidebar.open {
     padding: 1.3rem 1rem;
     gap: 1.5rem;
     margin-top: 1rem;
+    overflow: scroll;
 }
 
 .nav-list li{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .8rem;
     padding-left: 1rem;
 
 }
 
 .nav-list i{
-    font-size: var(--medium-size-font);
-    color: var(--first-color);
+    font-size: var(--small-size-font);
+    color: var(--blue-700);
 }
 
 .nav-list a{
-    font-size: var(--second-font);
-    color: var(--first-color);
+    font-size: var(--small-size-font);
+    color: var(--gray-800);
 }
 
 
