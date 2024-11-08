@@ -13,8 +13,8 @@
   --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
 
   --body-color: hsl(var(--second-hue), 100%, 99%);
-  --secondary-background: #f3f1ff;
-  --light-bg: #f3f1ff;
+  --secondary-background: #eaf3fe;
+  --light-bg: #eaf3fe;
 
   --blue-50: #edf9ff;
   --blue-100: #d7f1ff;
@@ -76,6 +76,7 @@
     border: 1px solid var(--gray-100);
     border-radius: 10px;
     outline: none;
+    font-family: var(--third-font);
     transition: transform 0.3s ease, border-color 0.3s ease;
   }
 
@@ -126,6 +127,43 @@
     background-color:var(--blue-700);
     color: white;
   }
+
+  /* Add these styles to your existing CSS file */
+.category-dropdown {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  font-size: var(--small-size-font);
+  border: 1px solid var(--gray-100);
+  border-radius: .5rem;
+  background-color: transparent;
+  color: var(--gray-700);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1em;
+  font-family: var(--second-font);
+}
+
+.category-dropdown:hover {
+  border-color: var(--blue-700);
+}
+
+.category-dropdown:focus {
+  outline: none;
+  border-color: var(--blue-700);
+  box-shadow: 0 0 0 2px rgba(var(--blue-700-rgb), 0.1);
+}
+
+.results-message {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.375rem;
+  font-size: var(--small-size-font);
+  color: var(--gray-700);
+  display: none; /* Hidden by default */
+}
   
   /* Article Grid */
   .articles-grid {
@@ -171,7 +209,7 @@
   }
 
   .article-header .article-title{
-    margin-left: .5rem;
+    margin-left: .4rem;
   }
   
   .article-image {
@@ -312,7 +350,7 @@
   
   .nav-title {
     font-weight: 500;
-    font-size: 1rem;
+    font-size: var(--small-size-font);
     color: var(--text-color);
   }
   
@@ -363,9 +401,14 @@
     margin-right: .5rem;
   }
 
+  .article-content h2{
+    color: var(--gray-700);
+  }
+
   .article-content p{
     font-family: var(--third-font);
-    margin: 1rem 0;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
   }
  
   /* Add this to your style.css file */
