@@ -14,7 +14,7 @@
     --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
 
     --body-color: hsl(var(--second-hue), 100%, 99%);
-    --secondary-background: #f3f1ff;
+    --secondary-background: #eaf3fe;
 
     --blue-50: #edf9ff;
     --blue-100: #d7f1ff;
@@ -100,7 +100,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f3f1ff94;
+    background-color: rgb(198 207 247 / 35%);
     border-radius: 12px;
     backdrop-filter: blur(10px);
     transition: 0.4s;
@@ -238,6 +238,7 @@ nav.sidebar.open {
 
 main{
     overflow: hidden;
+    margin: auto;
     margin-top: 6rem;
     display: flex;
     flex-direction: column;
