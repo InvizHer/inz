@@ -13,8 +13,8 @@
   --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
 
   --body-color: hsl(var(--second-hue), 100%, 99%);
-  --secondary-background: #eaf3fe;
-  --light-bg: #eaf3fe;
+  --secondary-background: #eaf3fe91;
+  --light-bg: #eaf3fe91;
 
   --blue-50: #edf9ff;
   --blue-100: #d7f1ff;
@@ -46,7 +46,7 @@
 
   --large-size-font: 1.5rem;
   --medium-size-font: 1rem;
-  --small-size-font: 0.8rem;
+  --small-size-font: 0.82rem;
   --tiny-size-font: 0.6rem;
 }
 
