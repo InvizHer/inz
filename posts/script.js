@@ -7,7 +7,7 @@ let articles = [];
 // DOM Elements
 const articlesGrid = document.querySelector('.articles-grid');
 const searchForm = document.querySelector('.search-form');
-const categoryButtons = document.querySelectorAll('.category-btn');
+const categoryDropdown = document.querySelector('.category-dropdown');
 const pagination = document.querySelector('.pagination');
 
 // Mock Articles Data (Replace with your actual articles)
@@ -104,6 +104,13 @@ const mockArticles = [
   }
 ];
 
+// Add new DOM element for results message
+const resultsMessage = document.createElement('div');
+resultsMessage.className = 'results-message';
+// Insert it before the articles grid
+if (articlesGrid) {
+  articlesGrid.parentNode.insertBefore(resultsMessage, articlesGrid);
+}
 
 // Initialize the blog
 async function initBlog() {
@@ -114,7 +121,7 @@ async function initBlog() {
   if (isHomePage) {
     renderHomePagePosts();
     renderHomePageProjects();
-    return; // Exit early if we're on home page
+    return;
   }
 
   // Check if we're on the blog/posts page
@@ -124,14 +131,10 @@ async function initBlog() {
     currentPage = parseInt(urlParams.get('page')) || 1;
     currentCategory = urlParams.get('category') || '';
     
-    if (currentCategory) {
-      categoryButtons.forEach(button => {
-        if (button.dataset.category === currentCategory) {
-          button.classList.add('active');
-        } else {
-          button.classList.remove('active');
-        }
-      });
+    // Update dropdown selection if category is in URL
+    if (currentCategory && categoryDropdown) {
+      categoryDropdown.value = currentCategory;
+      updateResultsMessage('category', currentCategory);
     }
     
     renderArticles();
@@ -157,6 +160,22 @@ function formatDate(dateString) {
   return new Date(dateString).toLocaleDateString('en-US', options); 
 }
 
+// Add new function to update results message
+function updateResultsMessage(type, query = '', resultCount = 0) {
+  if (!resultsMessage) return;
+
+  if (type === 'search' && query && resultCount > 0) {
+    resultsMessage.textContent = `Showing results for "${query}" (${resultCount} results found)`;
+    resultsMessage.style.display = 'block';
+  } else if (type === 'category' && query) {
+    const categoryName = query.charAt(0).toUpperCase() + query.slice(1);
+    resultsMessage.textContent = `Showing posts in category "${categoryName}"`;
+    resultsMessage.style.display = 'block';
+  } else {
+    resultsMessage.style.display = 'none';
+  }
+}
+
 // Fetch articles (Replace with actual API call)
 async function fetchArticles() {
   // Simulate API call
@@ -166,11 +185,17 @@ async function fetchArticles() {
 }
 
 // Render articles with loading animation
+// Update the renderArticles function
 function renderArticles(filteredArticles = null) {
-  if (!articlesGrid) return; // Early return if articlesGrid doesn't exist
+  if (!articlesGrid) return;
   
   const articlesToRender = filteredArticles || filterArticles();
   articlesGrid.style.opacity = '0';
+  
+  // If no filtered articles provided and we have a category, update the message
+  if (!filteredArticles && currentCategory) {
+    updateResultsMessage('category', currentCategory);
+  }
   
   const html = articlesToRender
     .slice((currentPage - 1) * ARTICLES_PER_PAGE, currentPage * ARTICLES_PER_PAGE)
@@ -190,7 +215,6 @@ function renderArticles(filteredArticles = null) {
 
   articlesGrid.innerHTML = html;
   
-  // Trigger fade in animation
   requestAnimationFrame(() => {
     articlesGrid.style.opacity = '1';
   });
@@ -205,15 +229,15 @@ function filterArticles(searchQuery = '') {
   }
   
   if (searchQuery) {
-    filtered = filtered.filter(article => 
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.description.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    const searchResults = handleSearch(searchQuery);
+    if (!searchResults) {
+      return filtered; // Return all filtered articles if no search results
+    }
+    filtered = searchResults;
   }
   
   return filtered;
 }
-
 // Update pagination
 function updatePagination() {
   if (!pagination) return; // Early return if pagination doesn't exist
@@ -278,46 +302,39 @@ function showToast(message, type = 'info') {
 
 // Initialize event listeners
 function initializeEventListeners() {
-  // Only add event listeners if elements exist
   if (searchForm) {
-    // Search form submission
     searchForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const searchQuery = e.target.querySelector('input').value;
-      const filteredArticles = filterArticles(searchQuery);
-      
-      if (filteredArticles.length === 0) {
-        showToast('No posts found, Try another search.', 'error');
-      } else {
-        showToast(`Found ${filteredArticles.length} search reasults..`, 'success');
+      if (!searchQuery.trim()) {
+        updateResultsMessage('search'); // Hide message if search is empty
+        renderArticles();
+        return;
       }
-      
       currentPage = 1;
-      renderArticles(filteredArticles);
+      renderArticles(filterArticles(searchQuery));
       updatePagination();
       updateURL();
     });
   }
   
-  if (categoryButtons.length > 0) {
-    // Category buttons
-    categoryButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        currentCategory = button.dataset.category;
-        currentPage = 1;
-        
-        categoryButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        
-        renderArticles();
-        updatePagination();
-        updateURL();
-      });
+  if (categoryDropdown) {
+    categoryDropdown.addEventListener('change', (e) => {
+      currentCategory = e.target.value;
+      currentPage = 1;
+      if (!currentCategory) {
+        updateResultsMessage('category'); // Hide message if no category selected
+      } else {
+        updateResultsMessage('category', currentCategory);
+      }
+      renderArticles();
+      updatePagination();
+      updateURL();
     });
   }
   
   if (pagination) {
-    // Pagination buttons
+    // Pagination buttons (existing code)
     pagination.addEventListener('click', (e) => {
       if (e.target.classList.contains('pagination-btn')) {
         currentPage = parseInt(e.target.dataset.page);
@@ -330,6 +347,23 @@ function initializeEventListeners() {
   }
 }
 
+// Update the handleSearch function
+function handleSearch(searchQuery) {
+  const matchingArticles = articles.filter(article => 
+    article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    article.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  
+  if (matchingArticles.length === 0) {
+    showToast('No posts found. Try another search.', 'error');
+    updateResultsMessage('search'); // Hide the message
+    return false;
+  }
+  
+  showToast(`Found ${matchingArticles.length} search results.`, 'success');
+  updateResultsMessage('search', searchQuery, matchingArticles.length);
+  return matchingArticles;
+}
 // Update URL with current page and category
 function updateURL() {
   const params = new URLSearchParams();
