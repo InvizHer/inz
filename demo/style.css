@@ -100,7 +100,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(198 207 247 / 35%);
+    background-color: #eaf3fe91;
     border-radius: 12px;
     backdrop-filter: blur(10px);
     transition: 0.4s;
