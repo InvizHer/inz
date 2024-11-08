@@ -202,7 +202,7 @@ function renderArticles(filteredArticles = null) {
     .map(article => `
       <article class="article-card">
         <img src="${article.image}" alt="${article.title}" class="article-image">
-        <div class="article-content">
+        <div class="article-card-content">
           <h2><a href="${article.url}" class="article-title">${article.title}</a></h2>
           <div class="article-meta">
             <span class="article-date">${formatDate(article.date)}</span>
@@ -482,11 +482,11 @@ async function loadRelatedPosts() {
   if (prevPostElement) {
       prevPostElement.innerHTML = prevPost 
           ? `
-              <span class="nav-label">Previous Post</span>
+              <span class="nav-label">Previous Post <i class="ri-arrow-left-double-fill"></i></span>
               <a href="${prevPost.url}" class="nav-title">${prevPost.title}</a>
             `
           : `
-              <span class="nav-label">Previous Post</span>
+              <span class="nav-label">Previous Post <i class="ri-arrow-left-double-fill"></i></span>
               <span class="nav-title">No previous post</span>
             `;
       prevPostElement.className = `nav-post prev-post${!prevPost ? ' empty' : ''}`;
@@ -497,11 +497,11 @@ async function loadRelatedPosts() {
   if (nextPostElement) {
       nextPostElement.innerHTML = nextPost
           ? `
-              <span class="nav-label">Next Post</span>
+              <span class="nav-label">Next Post <i class="ri-arrow-right-double-fill"></i></span>
               <a href="${nextPost.url}" class="nav-title">${nextPost.title}</a>
             `
           : `
-              <span class="nav-label">Next Post</span>
+              <span class="nav-label">Next Post <i class="ri-arrow-right-double-fill"></i></span>
               <span class="nav-title">No next post</span>
             `;
       nextPostElement.className = `nav-post next-post${!nextPost ? ' empty' : ''}`;
@@ -524,7 +524,7 @@ async function loadRelatedPosts() {
       const relatedHtml = relatedArticles.map(article => `
           <article class="article-card">
         <img src="${article.image}" alt="${article.title}" class="article-image">
-        <div class="article-content">
+        <div class="article-card-content">
           <h2><a href="${article.url}" class="article-title">${article.title}</a></h2>
           <div class="article-meta">
             <span class="article-date">${formatDate(article.date)}</span>
