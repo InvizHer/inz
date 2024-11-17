@@ -1,0 +1,30 @@
+if (path.startsWith("/links/")) {
+const id = path.split("/")[2];
+
+if (request.method === "PUT") {
+    try {
+        const { originalLink, token, name } = await request.json();
+        await updateLink(id, originalLink, token, name);
+        return new Response(
+            JSON.stringify({ success: true }),
+            { 
+                status: 200, 
+                headers: { 
+                    "Content-Type": "application/json",
+                    ...corsHeaders
+                } 
+            }
+        );
+    } catch (error) {
+        return new Response(
+            JSON.stringify({ error: "Failed to update link" }),
+            { 
+                status: 500, 
+                headers: { 
+                    "Content-Type": "application/json",
+                    ...corsHeaders
+                } 
+            }
+        );
+    }
+}
