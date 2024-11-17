@@ -17,9 +17,9 @@ if (request.method === "PUT") {
         );
     } catch (error) {
         return new Response(
-            JSON.stringify({ error: "Failed to update link" }),
+            JSON.stringify({ error: error.message || "Failed to update link" }),
             { 
-                status: 500, 
+                status: error.message === "Token already exists" ? 400 : 500, 
                 headers: { 
                     "Content-Type": "application/json",
                     ...corsHeaders
